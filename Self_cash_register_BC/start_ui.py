@@ -7,9 +7,10 @@ from UI.start import Ui_MainWindow
 from UI.view1 import Ui_Form as view1
 from UI.read_result import Ui_read_result
 import product_registration
-from BC_video_copy import txt2dict
+from BC_video_copy import csv2dict
 import numpy as np
 import cv2
+import csv
 from play_sound import SoundPlayer #階層に注意
 from time import sleep
 from pyzbar.pyzbar import decode
@@ -49,13 +50,11 @@ class View1(QtWidgets.QWidget):
         data = read_BC()
         if len(data) == 0:
             print("バーコードが読み取れていない！！！！") # 例外処理について後で考える！
-        if data[0][0].decode('utf-8', 'ignore') in dict_name.keys():
-            self.table_items.append([dict_name[data[0][0].decode('utf-8', 'ignore')],
-                                dict_prices[data[0][0].decode('utf-8', 'ignore')]])
-        else:
-            self.table_items.append(["その他", 0])
-        print(self.table_items[-1][0], self.table_items[-1][1])
-        read_result.draw_result(self.table_items[-1][0], self.table_items[-1][1])
+        bc_num = data[0][0].decode('utf-8', 'ignore') if data[0][0].decode('utf-8', 'ignore') in dict_names.keys() else "その他"
+        self.table_items.append(bc_num)
+        name_c, price_c = dict_names[bc_num], dict_prices[bc_num]
+        print(name_c, price_c)
+        read_result.draw_result(name_c, price_c)
         read_result.show()
         self.hide()
 
@@ -120,8 +119,7 @@ def read_BC(window=None, camera=0):
 
 if __name__ == '__main__':
     #商品の辞書をロードする
-    dict_name = txt2dict('names_prices/BC_names.txt', 'name')
-    dict_prices = txt2dict('names_prices/BC_prices.txt', 'price')
+    dict_names, dict_prices = csv2dict('names_prices/BC_info.csv', 'name')
     app = QtWidgets.QApplication(sys.argv)
     start_window = StartWindow()
     view_1 = View1()

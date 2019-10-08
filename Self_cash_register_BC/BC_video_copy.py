@@ -1,25 +1,23 @@
 import numpy as np
 import sys
 import cv2
+import csv
 from pyzbar.pyzbar import decode
 from PIL import Image
 
 # 商品コードと商品名、金額
-def txt2dict(path, dict_type):
-    dict0 = {}
+def csv2dict(path):
+    dict_names, dict_prices = {}, {}
     with open(path) as f:
         data = f.read()
     lines = data.strip().split("\n")
     for line in lines:
         try:
-            key, value = line.split(",")
-            if dict_type == "name":
-                dict0[key] = value
-            elif dict_type == "price":
-                dict0[key] = int(value)
+            bc_num, name, price = line.split(",")
+            dict_names[bc_num], dict_prices[bc_num] = name, int(price)
         except:
             pass
-    return dict0
+    return dict_names, dict_prices
 
 def read_BC(camera=0):
     # VideoCaptureのインスタンスを作成する。
@@ -63,7 +61,7 @@ def register_main():
             break #例外処理について後で考える！
 
         # コード内容を出力
-        print(dict_name[data[0][0].decode('utf-8', 'ignore')],
+        print(dict_names[data[0][0].decode('utf-8', 'ignore')],
               ":", dict_prices[data[0][0].decode('utf-8', 'ignore')])
         #print(data[0][0].decode('utf-8', 'ignore'))
 
@@ -90,6 +88,5 @@ def register_main():
     print("合計 =", prices)
 
 if __name__ == "__main__":
-    dict_name = txt2dict(path='names_prices/BC_names.txt', dict_type="name")
-    dict_prices = txt2dict(path='names_prices/BC_prices.txt', dict_type="price")
+    dict_names, dict_prices = csv2dict(path='names_prices/BC_info.csv')
     register_main()
