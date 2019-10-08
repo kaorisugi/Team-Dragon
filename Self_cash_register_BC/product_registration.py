@@ -20,7 +20,7 @@ def add_main():
             inp = input("これで良ければ'Y'、ダメならば'N'を入力してください。:")
             if inp in ['y','Y','n','N']:break #正しいキーが入力されるまで繰り返す
             print('正しいキーを入力してください')
-        # キー入力を無制限に待って、キーが'q'だったらBreakする
+        # Yが入力されたら確定し終了、Nが入力されたらやり直し
         if inp in ['y','Y']:
             break
         elif inp in ['n','N']:
