@@ -119,7 +119,7 @@ def read_BC(window=None, camera=0):
 
 if __name__ == '__main__':
     #商品の辞書をロードする
-    dict_names, dict_prices = csv2dict('names_prices/BC_info.csv', 'name')
+    dict_names, dict_prices = csv2dict('names_prices/BC_info.csv')
     app = QtWidgets.QApplication(sys.argv)
     start_window = StartWindow()
     view_1 = View1()
