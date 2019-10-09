@@ -68,8 +68,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>70</y>
+      <x>10</x>
+      <y>40</y>
       <width>1491</width>
       <height>261</height>
      </rect>
@@ -91,7 +91,7 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DIN Condensed'; font-size:85pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:288pt; color:#fae984;&quot;&gt;welcome!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:320pt; color:#fae984;&quot;&gt;welcome!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QWidget" name="gridLayoutWidget">
@@ -109,7 +109,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>520</y>
+      <y>540</y>
       <width>251</width>
       <height>231</height>
      </rect>
@@ -122,7 +122,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>340</y>
+      <y>360</y>
       <width>1501</width>
       <height>191</height>
      </rect>
@@ -133,7 +133,7 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:144pt; font-weight:600; color:#245928;&quot;&gt;DQ Register&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:190pt; font-weight:600; color:#245928;&quot;&gt;DQ Register&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
@@ -149,7 +149,7 @@ p, li { white-space: pre-wrap; }
   </widget>
  </widget>
  <resources>
-  <include location="teamdragon_System_NAVI_2.qrc"/>
+  <include location="../../../diveintocode-ml/group_work/Team-Dragon/Self_cash_register_BC/UI/teamdragon_System_NAVI_2.qrc"/>
  </resources>
  <connections/>
 </ui>
