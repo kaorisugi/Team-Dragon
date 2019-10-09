@@ -1,44 +1,13 @@
+# -*- coding: utf-8 -*-
 import sys
 import time
 from PyQt5.QtWidgets import *
 from PyQt5 import*
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
+from d_modules import *
 
-class WelcomeScreen(QtWidgets.QMainWindow):
-    def __init__(self,parent=None):
-        super(StartWindow, self).__init__(parent)
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self)
-    def keyPressEvent(self, e):
-        if e.key() == 16777220:
-            pre_scan_screen.show()
-            self.hide()
-        elif e.key() == Qt.Key_Escape:
-            product_registration.add_main()
-
-
-class View1(QtWidgets.QWidget):
-    def __init__(self,parent=None):
-        super(View1, self).__init__(parent)
-        self.ui = view1()
-        self.ui.setupUi(self)
-    def keyPressEvent(self, e):
-        # エスケープキーを押すと画面が閉じる
-        if e.key() == 16777220:
-            self.register_main()
-        elif e.key() == Qt.Key_Escape:
-            self.close()
-
-
-class ReadResult(QtWidgets.QMainWindow):
-    def __init__(self,parent=None):
-        super(ReadResult, self).__init__(parent)
-        self.ui = Ui_read_result()
-        self.ui.setupUi(self)
-
-
-
+from functools import partial
 
 if __name__ == '__main__':
     # 商品の辞書をロードする
@@ -52,11 +21,28 @@ if __name__ == '__main__':
     else_item_screen = ElseItemScreen()
     total_screen = TotalScreen()
     thank_you_screen = ThankYouScreen()
-    
+
+    #WelcomeScreenのボタンを関数と接続する
+    #partialを使わないとどうなる？
+    welcome_screen.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = welcome_screen, screen2 = pre_scan_screen))
+    #管理者画面がない！
+
+    #pre_scan_screen
+    pre_scan_screen.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = pre_scan_screen, screen2 = welcome_screen))
+
+    #ReadResultScreen
+    #Continue
+    read_result_screen.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = read_result_screen, screen2 = pre_scan_screen))
+    #Finish
+    read_result_screen.pushButton2.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = read_result_screen, screen2 = total_screen))
+    #Cancel
+    read_result_screen.pushButton2.clicked.connect(
+        pre_scan_screen.pop_item())
+
     welcome_screen.showFullScreen()
-    if welcome_screen.return == "Enter":
-        pre_scan_screen.show()
-    elif welcome_screen.return == "Cancell":
-        read_result_screen.show()
 
     sys.exit(app.exec_())
