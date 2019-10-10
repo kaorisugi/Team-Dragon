@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import*
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from UI import *
+from UI.SuperWelcomeScreen import *
 import product_registration
 
 class WelcomeScreen(QtWidgets.QMainWindow):
@@ -19,7 +19,7 @@ class WelcomeScreen(QtWidgets.QMainWindow):
         :param parent:
         '''
         super().__init__(parent)
-        self.ui = SuperWelcomeScreen.SuperWelcomeScreen()
+        self.ui = UI_SuperWelcomeScreen()
         self.ui.setupUi(self)
     def showEvent(self, _):
         '''

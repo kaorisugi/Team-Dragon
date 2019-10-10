@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import*
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from UI import *
+from UI.SuperReadResultScreen import *
 from ScreensCommonFuncs import *
 
 class ReadResultScreen(QtWidgets.QWidget):
@@ -20,7 +20,7 @@ class ReadResultScreen(QtWidgets.QWidget):
         :param dict_prices:
         '''
         super().__init__(parent)
-        self.ui = SuperReadResultScreen.SuperReadResultScreenn()
+        self.ui = UI_SuperReadResultScreenn()
         self.ui.setupUi(self)
 
     def draw_read_result(self, table_items):

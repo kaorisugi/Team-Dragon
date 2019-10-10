@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import*
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from UI import *
+from UI.SuperScanScreen import *
 from ScreensCommonFuncs import *
 
 class ScanScreen(QtWidgets.QWidget):
@@ -20,7 +20,7 @@ class ScanScreen(QtWidgets.QWidget):
         :param dict_prices:
         '''
         super().__init__(parent)
-        self.ui = SuperScanScreen.SuperScanScreen()
+        self.ui = UI_SuperScanScreen()
         self.ui.setupUi(self)
         self.table_items =[]
         self.dict_names = dict_names
