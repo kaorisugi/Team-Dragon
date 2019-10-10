@@ -6,7 +6,7 @@ from PyQt5 import*
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from UI import *
-from d_modules.ScreensCommnonFunc import *
+from ScreensCommonFuncs import *
 
 class ReadResultScreen(QtWidgets.QWidget):
     '''
