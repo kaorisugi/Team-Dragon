@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SuperScanScreen</class>
- <widget class="QMainWindow" name="SuperScanScreen">
+ <class>SuperNoItemsScreen</class>
+ <widget class="QMainWindow" name="SuperNoItemsScreen">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1440</width>
-    <height>810</height>
+    <width>1400</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,14 +18,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>1440</width>
-    <height>810</height>
+    <width>1400</width>
+    <height>800</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1440</width>
-    <height>810</height>
+    <width>1400</width>
+    <height>800</height>
    </size>
   </property>
   <property name="baseSize">
@@ -46,7 +46,7 @@
    <number>-2</number>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:url(:/newPrefix/teamdragon_System_NAVI_yoko.009.jpeg)</string>
+   <string notr="true">background:rgb(43, 148, 209)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="gridLayoutWidget">
@@ -60,11 +60,11 @@
     </property>
     <layout class="QGridLayout" name="gridLayout"/>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>1240</x>
-      <y>870</y>
+      <x>750</x>
+      <y>840</y>
       <width>430</width>
       <height>120</height>
      </rect>
@@ -76,17 +76,33 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background:url(:/newPrefix/image/cansel.png)</string>
+     <string notr="true">background:url(:/newPrefix/image/continue.png)</string>
     </property>
     <property name="text">
      <string notr="true"/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QPushButton" name="pushButton_EXIT">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>610</y>
+      <width>430</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:url(:/newPrefix/exit.png)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>-40</x>
-      <y>-20</y>
+      <y>0</y>
       <width>1440</width>
       <height>810</height>
      </rect>
@@ -103,65 +119,20 @@
       <height>810</height>
      </size>
     </property>
-    <property name="font">
-     <font>
-      <family>DIN Condensed</family>
-     </font>
-    </property>
     <property name="styleSheet">
-     <string notr="true">background:url(:/newPrefix/teamdragon_System_NAVI_yoko.002.jpeg)</string>
+     <string notr="true">background:url(:/newPrefix/UI/teamdragon_System_NAVI_yoko.003.jpeg)</string>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/newPrefix/teamdragon_System_NAVI_yoko_002.jpeg</pixmap>
+     <pixmap resource="teamdragon_System_NAVI.qrc">:/newPrefix/teamdragon_System_NAVI_yoko.003.jpeg</pixmap>
     </property>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>880</x>
-      <y>20</y>
-      <width>431</width>
-      <height>281</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout"/>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>880</x>
-      <y>630</y>
-      <width>430</width>
-      <height>120</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>430</width>
-      <height>120</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>430</width>
-      <height>120</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:url(:/newPrefix/cansel.png)</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <zorder>label_3</zorder>
    <zorder>gridLayoutWidget</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>verticalLayoutWidget</zorder>
    <zorder>pushButton_2</zorder>
+   <zorder>label</zorder>
+   <zorder>pushButton_EXIT</zorder>
   </widget>
  </widget>
  <resources>
