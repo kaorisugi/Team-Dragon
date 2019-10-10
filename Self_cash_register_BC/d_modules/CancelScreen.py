@@ -8,17 +8,15 @@ from PyQt5.QtCore import *
 from UI import *
 from d_modules.ScreensCommnonFunc import *
 
-class ElseItemScreen(QtWidgets.QWidget):
+class CancelScreen(QtWidgets.QWidget):
     '''
 
     '''
-    def __init__(self, parent = None, dict_names = None, dict_prices = None):
+    def __init__(self, parent = None):
         '''
 
         :param parent:
-        :param dict_names:
-        :param dict_prices:
         '''
         super().__init__(parent)
-        self.ui = SuperElseItemScreen.SuperElseItemScreen()
+        self.ui = SuperCancelScreen.SuperCancelScreen()
         self.ui.setupUi(self)

@@ -15,33 +15,73 @@ if __name__ == '__main__':
     
     app = QtWidgets.QApplication(sys.argv)
     welcome_screen = WelcomeScreen()
-    pre_scan_screen = PreScanScreen()
+    scan_screen = ScanScreen(dict_names = dict_names, dict_prices = dict_prices)
     read_result_screen = ReadResultScreen()
     no_items_screen = NoItemsScreen()
     else_item_screen = ElseItemScreen()
     total_screen = TotalScreen()
+    cancel_screen = CancelScreen()
     thank_you_screen = ThankYouScreen()
+
+    #WelcomeScreenが表示された時にScanScreenを初期化するようにする
+    #これでできるのか？
+    welcome_screen.showEvent = scan_screen.__init__
 
     #WelcomeScreenのボタンを関数と接続する
     #partialを使わないとどうなる？
-    welcome_screen.pushButton1.clicked.connect(
-        partial(ScreensCommonFunc.NextScreen, screen1 = welcome_screen, screen2 = pre_scan_screen))
+    welcome_screen.ui.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = welcome_screen, screen2 = scan_screen))
     #管理者画面がない！
 
-    #pre_scan_screen
-    pre_scan_screen.pushButton1.clicked.connect(
-        partial(ScreensCommonFunc.NextScreen, screen1 = pre_scan_screen, screen2 = welcome_screen))
+    #scan_screen
+    scan_screen.ui.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = scan_screen, screen2 = welcome_screen))
+    #cancelボタン必要かも
+    #Finishボタン必要かも
 
     #ReadResultScreen
     #Continue
-    read_result_screen.pushButton1.clicked.connect(
-        partial(ScreensCommonFunc.NextScreen, screen1 = read_result_screen, screen2 = pre_scan_screen))
+    read_result_screen.ui.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = read_result_screen, screen2 = scan_screen))
     #Finish
-    read_result_screen.pushButton2.clicked.connect(
+    read_result_screen.ui.pushButton2.clicked.connect(
         partial(ScreensCommonFunc.NextScreen, screen1 = read_result_screen, screen2 = total_screen))
     #Cancel
-    read_result_screen.pushButton2.clicked.connect(
+    read_result_screen.ui.pushButton3.clicked.connect(
         pre_scan_screen.pop_item())
+
+    #NoItemsScreen
+    #Exit(?)
+    no_items_screen.ui.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = no_items_screen, screen2 = scan_screen))
+
+    #ElseItemScreen
+    #Exit(?)
+    else_item_screen.ui.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = else_item_screen, screen2 = scan_screen))
+
+    #TotalScreen
+    #PayMoney
+    total_screen.ui.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = total_screen, screen2 = pre_scan_screen))
+    #Cancel
+    total_screen.ui.pushButton2.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = total_screen, screen2 = total_screen))
+
+    #CancelScreen
+    #No
+    cancel_screen.ui.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = cancel_screen, screen2 = total_screen))
+    #Yes
+    cancel_screen.ui.pushButton2.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = cancel_screen, screen2 = welcome_screen))
+
+
+    #ThankYouScreen
+    #Exit(?)
+    thank_you_screen.ui.pushButton1.clicked.connect(
+        partial(ScreensCommonFunc.NextScreen, screen1 = thank_you_screen, screen2 = welcome_screen))
+
 
     welcome_screen.showFullScreen()
 

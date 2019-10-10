@@ -19,3 +19,10 @@ class WelcomeScreen(QtWidgets.QMainWindow):
         super(StartWindow, self).__init__(parent)
         self.ui = SsuperWelcomeScreen()
         self.ui.setupUi(self)
+    def showEvent(self, _):
+        '''
+        ScanScreenを初期化する。
+        :param _: 使わない
+        :return:
+        '''
+        pass
