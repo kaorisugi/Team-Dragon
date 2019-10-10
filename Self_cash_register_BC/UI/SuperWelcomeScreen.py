@@ -72,7 +72,7 @@ class Ui_SuperWelcomeScreen(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:85pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:320pt; color:#fae984;\">welcome!</span></p></body></html>"))
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:320pt; color:#fae984;\">WELCOME!</span></p></body></html>"))
         self.label_3.setText(_translate("SuperWelcomeScreen", "<html><head/><body><p align=\"center\"><span style=\" font-size:190pt; font-weight:600; color:#245928;\">DQ Register</span></p></body></html>"))
 
 import teamdragon_System_NAVI_003_rc
