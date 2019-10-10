@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>image/start.png</file>
+    <file>image/suraimu.png</file>
+    <file>image/haikei_033.jpeg</file>
+  </qresource>
+</RCC>
