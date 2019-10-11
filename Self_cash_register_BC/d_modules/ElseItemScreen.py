@@ -8,7 +8,7 @@ from PyQt5.QtCore import *
 from UI.SuperElseItemScreen import *
 from ScreensCommonFuncs import *
 
-class ElseItemScreen(QtWidgets.QWidget):
+class ElseItemScreen(QtWidgets.QMainWindow):
     '''
 
     '''
@@ -20,5 +20,5 @@ class ElseItemScreen(QtWidgets.QWidget):
         :param dict_prices:
         '''
         super().__init__(parent)
-        self.ui = UI_SuperElseItemScreen()
+        self.ui = Ui_SuperElseItemScreen()
         self.ui.setupUi(self)

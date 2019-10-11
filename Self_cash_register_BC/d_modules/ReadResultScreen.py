@@ -8,7 +8,7 @@ from PyQt5.QtCore import *
 from UI.SuperReadResultScreen import *
 from ScreensCommonFuncs import *
 
-class ReadResultScreen(QtWidgets.QWidget):
+class ReadResultScreen(QtWidgets.QMainWindow):
     '''
 
     '''
@@ -20,10 +20,10 @@ class ReadResultScreen(QtWidgets.QWidget):
         :param dict_prices:
         '''
         super().__init__(parent)
-        self.ui = UI_SuperReadResultScreenn()
+        self.ui = Ui_SuperReadResultScreen()
         self.ui.setupUi(self)
 
-    def draw_read_result(self, table_items):
+    def draw_read_result(self, table_items=None):
         '''
         買い物リストを受け取る。
         最後にリストに加えられたものを表示する。

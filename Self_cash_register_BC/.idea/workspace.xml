@@ -2,8 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7f6599e-0fb5-4ff9-9c7e-5f158ece13ec" name="Default Changelist" comment="実行ファイル（ドラゴン）">
+      <change afterPath="$PROJECT_DIR$/UI/SuperCancelScreen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperCancelScreen.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperElseItemScreen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperElseItemScreen.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperNoItemsScreen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperNoItemsScreen.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperReadResultScreen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperReadResultScreen.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperThankYouScreen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperThankYouScreen.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperTotalScreen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/SuperTotalScreen.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/cansel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/exit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/pay_money.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/teamdragon_System_NAVI_yoko.001.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/teamdragon_System_NAVI_yoko.002.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/teamdragon_System_NAVI_yoko.003.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/teamdragon_System_NAVI_yoko.004.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamdragon_System_NAVI_rc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/teamdragon_System_NAVI_003.py" beforeDir="false" afterPath="$PROJECT_DIR$/teamdragon_System_NAVI_003.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScreensCommonFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScreensCommonFuncs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/SuperScanScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/SuperScanScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/SuperScanScreen.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/SuperScanScreen.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/SuperWelcomeScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/SuperWelcomeScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/SuperWelcomeScreen.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/SuperWelcomeScreen.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/cancel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/cola.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/cola.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/continue.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/continue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/finish.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/finish.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/fukidasi.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/fukidasi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/haikei_033.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/UI/teamdragon_System_NAVI_yoko.009.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/no.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/no.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/scan.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/scan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/start.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/start.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/suraimu.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/suraimu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/image/yes.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/yes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/teamdragon_System_NAVI.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/teamdragon_System_NAVI.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/UI/teamdragon_System_NAVI.qrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/teamdragon_System_NAVI_003.qrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/teamdragon_System_NAVI_2_rc.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/d_modules/CancelScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/d_modules/CancelScreen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/d_modules/ElseItemScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/d_modules/ElseItemScreen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/d_modules/NoItemsScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/d_modules/NoItemsScreen.py" afterDir="false" />
@@ -12,6 +52,9 @@
       <change beforePath="$PROJECT_DIR$/d_modules/ThankYouScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/d_modules/ThankYouScreen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/d_modules/TotalScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/d_modules/TotalScreen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/d_modules/WelcomeScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/d_modules/WelcomeScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_d.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/names_prices/BC_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/names_prices/BC_info.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamdragon_System_NAVI_003.py" beforeDir="false" afterPath="$PROJECT_DIR$/teamdragon_System_NAVI_003.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,46 +65,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_modules/ReadResultScreen.py">
+        <entry file="file://$PROJECT_DIR$/main_d.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_modules/ScanScreen.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-172">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_modules/ThankYouScreen.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_modules/TotalScreen.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_modules/WelcomeScreen.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="-777">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="27" />
               <folding>
                 <element signature="e#24#34#0" expanded="true" />
               </folding>
@@ -70,44 +77,54 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/UI/SuperWelcomeScreen.py">
+        <entry file="file://$PROJECT_DIR$/d_modules/ScanScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="45">
+              <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_modules/NoItemsScreen.py">
+        <entry file="file://$PROJECT_DIR$/ScreensCommonFuncs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="544">
+              <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+              <folding>
+                <element signature="e#25#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_modules/ElseItemScreen.py">
+        <entry file="file://$PROJECT_DIR$/UI/SuperReadResultScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="-1222">
+              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_modules/CancelScreen.py">
+        <entry file="file://$PROJECT_DIR$/start_ui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            <state relative-caret-position="-1197">
+              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-end-line="15" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/SuperScanScreen.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/ui_call_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="121" column="28" selection-start-line="117" selection-end-line="123" selection-end-column="91" />
+              <folding>
+                <element signature="e#24#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -121,9 +138,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>NextScreen</find>
       <find>.Super</find>
     </findStrings>
     <replaceStrings>
+      <replace>next_screen</replace>
       <replace>.UI_Super</replace>
     </replaceStrings>
   </component>
@@ -147,22 +166,22 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/d_modules/SreensCommonFuncs.py" />
         <option value="$PROJECT_DIR$/d_modules/PreScanScreen.py" />
-        <option value="$PROJECT_DIR$/main_d.py" />
         <option value="$PROJECT_DIR$/d_modules/WelcomeScreen.py" />
         <option value="$PROJECT_DIR$/d_modules/CancelScreen.py" />
         <option value="$PROJECT_DIR$/d_modules/ElseItemScreen.py" />
         <option value="$PROJECT_DIR$/d_modules/NoItemsScreen.py" />
-        <option value="$PROJECT_DIR$/d_modules/ReadResultScreen.py" />
-        <option value="$PROJECT_DIR$/d_modules/ScanScreen.py" />
-        <option value="$PROJECT_DIR$/d_modules/ThankYouScreen.py" />
         <option value="$PROJECT_DIR$/d_modules/TotalScreen.py" />
+        <option value="$PROJECT_DIR$/d_modules/ThankYouScreen.py" />
+        <option value="$PROJECT_DIR$/d_modules/ReadResultScreen.py" />
+        <option value="$PROJECT_DIR$/main_d.py" />
+        <option value="$PROJECT_DIR$/ScreensCommonFuncs.py" />
+        <option value="$PROJECT_DIR$/d_modules/ScanScreen.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-1920" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -310,7 +329,7 @@
       <workItem from="1570282986553" duration="84000" />
       <workItem from="1570283126393" duration="87000" />
       <workItem from="1570283341342" duration="39677000" />
-      <workItem from="1570533402243" duration="24852000" />
+      <workItem from="1570533402243" duration="32698000" />
     </task>
     <task id="LOCAL-00001" summary="実行ファイル（ドラゴン）">
       <created>1570631319864</created>
@@ -323,17 +342,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67373000" />
+    <option name="totallyTimeSpent" value="75219000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24440895" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2802198" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32970297" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -343,7 +362,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32970297" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.28217822" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29081634" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -462,16 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui_call_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" selection-start-line="15" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <element signature="e#24#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -523,92 +532,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start_ui.py">
+    <entry file="file://$PROJECT_DIR$/UI/teamdragon_System_NAVI_2_rc.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/SuperScanScreen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="17" selection-start-line="24" selection-end-line="33" selection-end-column="25" />
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/SuperCancelScreen.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/SuperWelcomeScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/SuperThankYouScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d_modules/ElseItemScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
           <folding>
             <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d_modules/CancelScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d_modules/ThankYouScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d_modules/NoItemsScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#38#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d_modules/ReadResultScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="30" lean-forward="true" selection-start-line="25" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d_modules/WelcomeScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="41" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d_modules/TotalScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui_call_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="121" column="28" selection-start-line="117" selection-end-line="123" selection-end-column="91" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start_ui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1197">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/SuperReadResultScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1222">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScreensCommonFuncs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+          <folding>
+            <element signature="e#25#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_d.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d_modules/CancelScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d_modules/ElseItemScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/teamdragon_System_NAVI_2_rc.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/SuperScanScreen.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d_modules/ReadResultScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d_modules/NoItemsScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d_modules/ScanScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-172">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d_modules/ThankYouScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d_modules/TotalScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d_modules/WelcomeScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="-777">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="27" />
           <folding>
             <element signature="e#24#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI/SuperWelcomeScreen.py">
+    <entry file="file://$PROJECT_DIR$/d_modules/ScanScreen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="45">
+          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>

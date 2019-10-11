@@ -8,7 +8,7 @@ from PyQt5.QtCore import *
 from UI.SuperTotalScreen import *
 from ScreensCommonFuncs import *
 
-class TotalScreen(QtWidgets.QWidget):
+class TotalScreen(QtWidgets.QMainWindow):
     '''
 
     '''
@@ -18,6 +18,6 @@ class TotalScreen(QtWidgets.QWidget):
         :param parent:
         '''
         super().__init__(parent)
-        self.ui = UI_SuperTotalScreen()
+        self.ui = Ui_SuperTotalScreen()
         self.ui.setupUi(self)
 

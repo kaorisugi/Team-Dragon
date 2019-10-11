@@ -8,7 +8,7 @@ from PyQt5.QtCore import *
 from UI.SuperNoItemsScreen import *
 from ScreensCommonFuncs import *
 
-class NoItemsScreen(QtWidgets.QWidget):
+class NoItemsScreen(QtWidgets.QMainWindow):
     '''
 
     '''
@@ -18,5 +18,5 @@ class NoItemsScreen(QtWidgets.QWidget):
         :param parent:
         '''
         super().__init__(parent)
-        self.ui = UI_SuperNoItemsScreen()
+        self.ui = Ui_SuperNoItemsScreen()
         self.ui.setupUi(self)

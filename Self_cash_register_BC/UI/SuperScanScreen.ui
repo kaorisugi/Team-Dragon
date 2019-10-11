@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SuperWelcomeScreen</class>
- <widget class="QMainWindow" name="SuperWelcomeScreen">
+ <class>SuperScanScreen</class>
+ <widget class="QMainWindow" name="SuperScanScreen">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1800</width>
-    <height>1000</height>
+    <width>1440</width>
+    <height>810</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,14 +18,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>1800</width>
-    <height>1000</height>
+    <width>1440</width>
+    <height>810</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1800</width>
-    <height>1000</height>
+    <width>1440</width>
+    <height>810</height>
    </size>
   </property>
   <property name="baseSize">
@@ -46,31 +46,9 @@
    <number>-2</number>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:url(:/newPrefix/image/haikei_033.jpeg)</string>
+   <string notr="true">background:url(:/newPrefix/teamdragon_System_NAVI_yoko.009.jpeg)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>1250</x>
-      <y>830</y>
-      <width>430</width>
-      <height>120</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DIN Condensed</family>
-      <pointsize>72</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:url(:/newPrefix/image/start.png)</string>
-    </property>
-    <property name="text">
-     <string notr="true"/>
-    </property>
-   </widget>
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
@@ -82,25 +60,47 @@
     </property>
     <layout class="QGridLayout" name="gridLayout"/>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>870</y>
+      <width>430</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DIN Condensed</family>
+      <pointsize>72</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:url(:/newPrefix/image/cansel.png)</string>
+    </property>
+    <property name="text">
+     <string notr="true"/>
+    </property>
+   </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-40</x>
       <y>-20</y>
-      <width>1800</width>
-      <height>1000</height>
+      <width>1440</width>
+      <height>810</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>1800</width>
-      <height>1000</height>
+      <width>1440</width>
+      <height>810</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>1800</width>
-      <height>1000</height>
+      <width>1440</width>
+      <height>810</height>
      </size>
     </property>
     <property name="font">
@@ -108,42 +108,64 @@
       <family>DIN Condensed</family>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background:url(:/newPrefix/teamdragon_System_NAVI_yoko.002.jpeg)</string>
+    </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="teamdragon_System_NAVI_003.qrc">:/newPrefix/teamdragon_System_NAVI_yoko_002.jpeg</pixmap>
+     <pixmap>:/newPrefix/teamdragon_System_NAVI_yoko_002.jpeg</pixmap>
     </property>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>1230</x>
-      <y>10</y>
-      <width>461</width>
-      <height>371</height>
+      <x>880</x>
+      <y>20</y>
+      <width>431</width>
+      <height>281</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="camera"/>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
    </widget>
-   <zorder>gridLayoutWidget</zorder>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>630</y>
+      <width>430</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>430</width>
+      <height>120</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>430</width>
+      <height>120</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:url(:/newPrefix/cansel.png)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>label_3</zorder>
+   <zorder>gridLayoutWidget</zorder>
    <zorder>pushButton</zorder>
    <zorder>verticalLayoutWidget</zorder>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1800</width>
-     <height>22</height>
-    </rect>
-   </property>
+   <zorder>pushButton_2</zorder>
   </widget>
  </widget>
  <resources>
-  <include location="teamdragon_System_NAVI_003.qrc"/>
+  <include location="teamdragon_System_NAVI.qrc"/>
  </resources>
  <connections/>
 </ui>

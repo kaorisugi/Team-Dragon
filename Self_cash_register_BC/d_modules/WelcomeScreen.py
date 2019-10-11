@@ -19,7 +19,7 @@ class WelcomeScreen(QtWidgets.QMainWindow):
         :param parent:
         '''
         super().__init__(parent)
-        self.ui = UI_SuperWelcomeScreen()
+        self.ui = Ui_SuperWelcomeScreen()
         self.ui.setupUi(self)
     def showEvent(self, _):
         '''
