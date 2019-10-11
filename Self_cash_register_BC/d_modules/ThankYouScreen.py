@@ -5,10 +5,10 @@ from PyQt5.QtWidgets import *
 from PyQt5 import*
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from UI import *
-from d_modules.ScreensCommnonFunc import *
+from UI.SuperThankYouScreen import *
+from ScreensCommonFuncs import *
 
-class TotalScreen(QtWidgets.QWidget):
+class ThankYouScreen(QtWidgets.QMainWindow):
     '''
 
     '''
@@ -18,6 +18,6 @@ class TotalScreen(QtWidgets.QWidget):
         :param parent:
         '''
         super().__init__(parent)
-        self.ui = SuperThankYouScreen.SuperThankYouScreen()
+        self.ui = Ui_SuperThankYoulScreen()
         self.ui.setupUi(self)
 
