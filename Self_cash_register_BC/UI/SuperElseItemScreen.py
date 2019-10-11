@@ -11,14 +11,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SuperElseItemScreen(object):
     def setupUi(self, SuperElseItemScreen):
         SuperElseItemScreen.setObjectName("SuperElseItemScreen")
-        SuperElseItemScreen.resize(1400, 800)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        SuperElseItemScreen.resize(1440, 810)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(SuperElseItemScreen.sizePolicy().hasHeightForWidth())
         SuperElseItemScreen.setSizePolicy(sizePolicy)
-        SuperElseItemScreen.setMinimumSize(QtCore.QSize(1400, 800))
-        SuperElseItemScreen.setMaximumSize(QtCore.QSize(1400, 800))
+        SuperElseItemScreen.setMinimumSize(QtCore.QSize(1440, 810))
         SuperElseItemScreen.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setUnderline(False)
@@ -68,6 +67,7 @@ class Ui_SuperElseItemScreen(object):
         self.horizontalLayout.addItem(spacerItem2)
         self.pushButton_EXIT = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.pushButton_EXIT.setMinimumSize(QtCore.QSize(420, 120))
+        self.pushButton_EXIT.setMaximumSize(QtCore.QSize(420, 120))
         font = QtGui.QFont()
         font.setFamily("DIN Condensed")
         font.setPointSize(80)
@@ -89,7 +89,7 @@ class Ui_SuperElseItemScreen(object):
 
     def retranslateUi(self, SuperElseItemScreen):
         _translate = QtCore.QCoreApplication.translate
-        SuperElseItemScreen.setWindowTitle(_translate("SuperElseItemScreen", "SuperElseItemScreen"))
+        SuperElseItemScreen.setWindowTitle(_translate("SuperElseItemScreen", "ElseItemScreen"))
         self.label_2.setText(_translate("SuperElseItemScreen", "<html><head/><body><p align=\"center\"><span style=\" font-size:200pt; color:#fae984;\">THIS ITEM IS</span></p></body></html>"))
         self.label_3.setText(_translate("SuperElseItemScreen", "<html><head/><body><p align=\"center\"><span style=\" font-size:200pt; color:#fae984;\">NOT REGISTERD</span></p></body></html>"))
         self.pushButton_EXIT.setText(_translate("SuperElseItemScreen", "EXIT"))

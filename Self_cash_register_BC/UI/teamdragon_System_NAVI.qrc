@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="newPrefix">
+    <file>fukidasi.png</file>
+    <file>cola.png</file>
     <file>suraimu.png</file>
     <file>suraimu.png</file>
     <file>start.png</file>

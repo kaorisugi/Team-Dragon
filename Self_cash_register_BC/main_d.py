@@ -25,7 +25,6 @@ import sys
 if __name__ == '__main__':
     # 商品の辞書をロードする
     dict_names, dict_prices = csv2dict('names_prices/BC_info.csv')
-    print(dict_names, dict_prices)
 
     print()
 
@@ -110,16 +109,16 @@ if __name__ == '__main__':
 
     #CancelScreen
     #No
-    cancel_screen.ui.pushButton.clicked.connect(
+    cancel_screen.ui.pushButton_2.clicked.connect(
         partial(next_screen, screen1 = cancel_screen, screen2 = total_screen))
     #Yes
-    cancel_screen.ui.pushButton_EXIT.clicked.connect(
+    cancel_screen.ui.pushButton_4.clicked.connect(
         partial(next_screen, screen1 = cancel_screen, screen2 = welcome_screen))
 
 
     #ThankYouScreen
     #Exit(?)
-    thank_you_screen.ui.pushButton.clicked.connect(
+    thank_you_screen.ui.pushButton_2.clicked.connect(
         partial(next_screen, screen1 = thank_you_screen, screen2 = welcome_screen))
 
 

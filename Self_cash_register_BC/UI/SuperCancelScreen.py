@@ -11,14 +11,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SuperCanselScreen(object):
     def setupUi(self, SuperCanselScreen):
         SuperCanselScreen.setObjectName("SuperCanselScreen")
-        SuperCanselScreen.resize(1400, 800)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        SuperCanselScreen.resize(1440, 810)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(SuperCanselScreen.sizePolicy().hasHeightForWidth())
         SuperCanselScreen.setSizePolicy(sizePolicy)
-        SuperCanselScreen.setMinimumSize(QtCore.QSize(1400, 800))
-        SuperCanselScreen.setMaximumSize(QtCore.QSize(1400, 800))
+        SuperCanselScreen.setMinimumSize(QtCore.QSize(1440, 810))
+        SuperCanselScreen.setMaximumSize(QtCore.QSize(16777207, 16777215))
         SuperCanselScreen.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setUnderline(False)
@@ -72,7 +72,13 @@ class Ui_SuperCanselScreen(object):
         spacerItem3 = QtWidgets.QSpacerItem(100, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem3)
         self.pushButton = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
+        self.pushButton.setSizePolicy(sizePolicy)
         self.pushButton.setMinimumSize(QtCore.QSize(420, 120))
+        self.pushButton.setMaximumSize(QtCore.QSize(420, 420))
         self.pushButton.setStyleSheet("background:rgb(250, 233, 132);\n"
 "color:rgb(49, 88, 45);\n"
 "font: 80pt \"DIN Condensed\";")
@@ -91,7 +97,7 @@ class Ui_SuperCanselScreen(object):
 
     def retranslateUi(self, SuperCanselScreen):
         _translate = QtCore.QCoreApplication.translate
-        SuperCanselScreen.setWindowTitle(_translate("SuperCanselScreen", "SuperCanselScreen"))
+        SuperCanselScreen.setWindowTitle(_translate("SuperCanselScreen", "CanselScreen"))
         self.label_3.setText(_translate("SuperCanselScreen", "<html><head/><body><p align=\"center\"><span style=\" font-size:200pt; color:#fae984;\">CANCEL?</span></p></body></html>"))
         self.pushButton_EXIT.setText(_translate("SuperCanselScreen", "YES"))
         self.pushButton.setText(_translate("SuperCanselScreen", "NO"))

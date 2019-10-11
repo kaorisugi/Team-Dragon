@@ -11,18 +11,12 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
   <property name="minimumSize">
-   <size>
-    <width>1440</width>
-    <height>810</height>
-   </size>
-  </property>
-  <property name="maximumSize">
    <size>
     <width>1440</width>
     <height>810</height>
@@ -40,7 +34,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>ScanScreen</string>
   </property>
   <property name="toolTipDuration">
    <number>-2</number>
@@ -49,119 +43,326 @@
    <string notr="true">background:url(:/newPrefix/teamdragon_System_NAVI_yoko.009.jpeg)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="gridLayoutWidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>380</y>
-      <width>2</width>
-      <height>2</height>
+      <x>10</x>
+      <y>30</y>
+      <width>1381</width>
+      <height>771</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout"/>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <spacer name="verticalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Preferred</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 13pt &quot;DIN Condensed&quot;;
+color:rgb(250, 233, 132)</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:144pt;&quot;&gt;⬅︎&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Preferred</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>130</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>DIN Condensed</family>
+           <pointsize>150</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fae984;&quot;&gt;1.SHOW&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="minimumSize">
+          <size>
+           <width>500</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>130</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>DIN Condensed</family>
+           <pointsize>150</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fae984;&quot;&gt;THE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>130</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>DIN Condensed</family>
+           <pointsize>150</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fae984;&quot;&gt;BARCODE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>130</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>DIN Condensed</family>
+           <pointsize>150</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fae984;&quot;&gt;TO THE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>130</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>DIN Condensed</family>
+           <pointsize>150</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fae984;&quot;&gt;WINDOW&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="teamdragon_System_NAVI.qrc">:/newPrefix/cola.png</pixmap>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>180</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>350</width>
+           <height>420</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="teamdragon_System_NAVI.qrc">:/newPrefix/fukidasi.png</pixmap>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background:rgb(250, 233, 132);
+font: 80pt &quot;DIN Condensed&quot;;
+color:rgb(49, 88, 45)</string>
+         </property>
+         <property name="text">
+          <string>CANCEL</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>1240</x>
-      <y>870</y>
-      <width>430</width>
-      <height>120</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DIN Condensed</family>
-      <pointsize>72</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:url(:/newPrefix/image/cansel.png)</string>
-    </property>
-    <property name="text">
-     <string notr="true"/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>-40</x>
-      <y>-20</y>
-      <width>1440</width>
-      <height>810</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>1440</width>
-      <height>810</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>1440</width>
-      <height>810</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>DIN Condensed</family>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:url(:/newPrefix/teamdragon_System_NAVI_yoko.002.jpeg)</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>:/newPrefix/teamdragon_System_NAVI_yoko_002.jpeg</pixmap>
-    </property>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>880</x>
-      <y>20</y>
-      <width>431</width>
-      <height>281</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout"/>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>880</x>
-      <y>630</y>
-      <width>430</width>
-      <height>120</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>430</width>
-      <height>120</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>430</width>
-      <height>120</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:url(:/newPrefix/cansel.png)</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <zorder>label_3</zorder>
-   <zorder>gridLayoutWidget</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>verticalLayoutWidget</zorder>
-   <zorder>pushButton_2</zorder>
   </widget>
  </widget>
  <resources>
