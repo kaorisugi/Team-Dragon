@@ -25,6 +25,7 @@ import sys
 if __name__ == '__main__':
     # 商品の辞書をロードする
     dict_names, dict_prices = csv2dict('names_prices/BC_info.csv')
+    print(dict_names, dict_prices)
 
     print()
 
@@ -47,7 +48,7 @@ if __name__ == '__main__':
 
     #グローバル変数で買い物リストを定義する
     #直接参照しているのではなく、引数として渡せば結合度に問題ないのか？
-    table_items = [4902705001879, 4901777018686, 4902102113625]
+    table_items = ["4901777018686", "4902705001879", "4902102113625"]
     scan_screen.table_items = table_items
     read_result_screen.table_items = table_items
 
@@ -107,16 +108,16 @@ if __name__ == '__main__':
 
     #CancelScreen
     #No
-    cancel_screen.ui.pushButton_2.clicked.connect(
+    cancel_screen.ui.pushButton.clicked.connect(
         partial(next_screen, screen1 = cancel_screen, screen2 = total_screen))
     #Yes
-    cancel_screen.ui.pushButton_4.clicked.connect(
+    cancel_screen.ui.pushButton_EXIT.clicked.connect(
         partial(next_screen, screen1 = cancel_screen, screen2 = welcome_screen))
 
 
     #ThankYouScreen
     #Exit(?)
-    thank_you_screen.ui.pushButton_2.clicked.connect(
+    thank_you_screen.ui.pushButton.clicked.connect(
         partial(next_screen, screen1 = thank_you_screen, screen2 = welcome_screen))
 
 

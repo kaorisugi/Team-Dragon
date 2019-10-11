@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SuperThankYoulScreen</class>
- <widget class="QMainWindow" name="SuperThankYoulScreen">
+ <class>SuperThankYouScreen</class>
+ <widget class="QMainWindow" name="SuperThankYouScreen">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1440</width>
-    <height>810</height>
+    <width>1400</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,14 +18,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>1440</width>
-    <height>810</height>
+    <width>1400</width>
+    <height>800</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1440</width>
-    <height>810</height>
+    <width>1400</width>
+    <height>800</height>
    </size>
   </property>
   <property name="baseSize">
@@ -40,78 +40,20 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>SuperThankYouScreen</string>
   </property>
   <property name="toolTipDuration">
    <number>-2</number>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:url(:/newPrefix/teamdragon_System_NAVI_yoko.009.jpeg)</string>
+   <string notr="true">background:rgb(43, 148, 209)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>1290</x>
-      <y>820</y>
-      <width>430</width>
-      <height>120</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DIN Condensed</family>
-      <pointsize>72</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:url(:/newPrefix/image/cansel.png)</string>
-    </property>
-    <property name="text">
-     <string notr="true"/>
-    </property>
-   </widget>
-   <widget class="QWidget" name="gridLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>380</y>
-      <width>2</width>
-      <height>2</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout"/>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>50</y>
-      <width>1440</width>
-      <height>411</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>1440</width>
-      <height>16777215</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>DIN Condensed</family>
-      <pointsize>80</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:400pt; color:#fae984; vertical-align:sub;&quot;&gt;THANK YOU!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>500</x>
-      <y>570</y>
+      <x>750</x>
+      <y>840</y>
       <width>430</width>
       <height>120</height>
      </rect>
@@ -123,16 +65,148 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background:url(:/newPrefix/exit.png)</string>
+     <string notr="true">background:url(:/newPrefix/image/continue.png)</string>
     </property>
     <property name="text">
      <string notr="true"/>
     </property>
    </widget>
-   <zorder>gridLayoutWidget</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>label</zorder>
-   <zorder>pushButton_2</zorder>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1381</width>
+      <height>781</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>80</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>180</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>DIN Condensed</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:200pt; color:#fae984;&quot;&gt;THANK YOU!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="minimumSize">
+            <size>
+             <width>420</width>
+             <height>120</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background:rgb(250, 233, 132);
+color:rgb(49, 88, 45);
+font: 80pt &quot;DIN Condensed&quot;;</string>
+           </property>
+           <property name="text">
+            <string>EXIT</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Preferred</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>80</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
   </widget>
  </widget>
  <resources>

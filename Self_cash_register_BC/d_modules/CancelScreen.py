@@ -18,5 +18,5 @@ class CancelScreen(QtWidgets.QMainWindow):
         :param parent:
         '''
         super().__init__(parent)
-        self.ui = Ui_SuperCancelScreen()
+        self.ui = Ui_SuperCanselScreen()
         self.ui.setupUi(self)
