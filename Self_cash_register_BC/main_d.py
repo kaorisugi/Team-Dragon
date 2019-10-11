@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     app = QtWidgets.QApplication(sys.argv)
     welcome_screen = WelcomeScreen()
-    scan_screen = ScanScreen(dict_names = dict_names, dict_prices = dict_prices)
+    scan_screen = ScanScreen()
     read_result_screen = ReadResultScreen()
     no_items_screen = NoItemsScreen()
     else_item_screen = ElseItemScreen()
