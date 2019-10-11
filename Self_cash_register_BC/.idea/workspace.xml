@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7f6599e-0fb5-4ff9-9c7e-5f158ece13ec" name="Default Changelist" comment="実行ファイル（ドラゴン）">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ScreensCommonFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScreensCommonFuncs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d_modules/WelcomeScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/d_modules/WelcomeScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_d.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/髱呈浹逅ｴ蜒・jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/髱呈浹逅ｴ蜒・qrc" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_d.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+            <state relative-caret-position="1065">
+              <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
               <folding>
                 <element signature="e#24#34#0" expanded="true" />
               </folding>
@@ -30,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/d_modules/ScanScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-311">
+            <state relative-caret-position="-297">
               <caret line="8" column="8" selection-start-line="8" selection-end-line="8" selection-end-column="32" />
             </state>
           </provider>
@@ -39,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ScreensCommonFuncs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+            <state relative-caret-position="466">
+              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
               </folding>
@@ -65,27 +64,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1222">
               <caret line="10" column="12" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/start_ui.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1182">
-              <caret line="11" column="10" selection-start-line="11" selection-end-line="15" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui_call_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="121" column="28" selection-start-line="117" selection-end-line="123" selection-end-column="91" />
-              <folding>
-                <element signature="e#24#34#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -287,7 +265,7 @@
       <workItem from="1570282986553" duration="84000" />
       <workItem from="1570283126393" duration="87000" />
       <workItem from="1570283341342" duration="39677000" />
-      <workItem from="1570533402243" duration="36526000" />
+      <workItem from="1570533402243" duration="36737000" />
     </task>
     <task id="LOCAL-00001" summary="実行ファイル（ドラゴン）">
       <created>1570631319864</created>
@@ -300,7 +278,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79047000" />
+    <option name="totallyTimeSpent" value="79258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -594,27 +572,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
-          <folding>
-            <element signature="e#24#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/start_ui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1182">
           <caret line="11" column="10" selection-start-line="11" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d_modules/ScanScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-311">
-          <caret line="8" column="8" selection-start-line="8" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -628,10 +589,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d_modules/ScanScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297">
+          <caret line="8" column="8" selection-start-line="8" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ScreensCommonFuncs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        <state relative-caret-position="466">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
           <folding>
             <element signature="e#25#36#0" expanded="true" />
           </folding>

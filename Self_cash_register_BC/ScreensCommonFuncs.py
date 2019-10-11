@@ -44,9 +44,9 @@ def next_screen_scan(screen1, screen2):
     screen2.resize(size)  # 同じサイズへ
     # 画面の位置が完全に重なる
     '''
-    #screen1.hide()  # 遷移前のダイアログを非表示
+    screen1.hide()  # 遷移前のダイアログを非表示
     screen2.showFullScreen()  # 遷移後のダイアログを表示
-    read_BC_dummy()
+    read_BC()
 
 def read_BC_dummy():
     n = 0
@@ -108,7 +108,7 @@ def register_main(dict_names = None, table_items = None, scan_screen = None, rea
         data = read_BC()
         if len(data) == 0:
             print("バーコードが読み取れていない！！！！") # 例外処理について後で考える！
-        bc_num = data[0][0].decode('utf-8', 'ignore') if data[0][0].decode('utf-8', 'ignore') in dict_names.keys() else "その他" #"その他"よりも任意の英数字の方が良い？
+        bc_num = data[0][0].decode('utf-8', 'ignore') if data[0][0].decode('utf-8', 'ignore') in dict_names.keys() else "SOMETHING ELSE" #"その他"よりも任意の英数字の方が良い？
         table_items.append(bc_num)
         #read_result.draw_read_result_func(table_items)
         read_result_screen.showFullScreen()
