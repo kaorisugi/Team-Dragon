@@ -68,7 +68,7 @@ if __name__ == '__main__':
     #WelcomeScreenのボタンを関数と接続する
     #partialを使わないとどうなる？
     welcome_screen.ui.pushButton.clicked.connect(
-        partial(next_screen, screen1 = welcome_screen, screen2 = scan_screen))
+        partial(next_screen_scan, screen1 = welcome_screen, screen2 = scan_screen))
     #管理者画面がない！
 
     #scan_screen

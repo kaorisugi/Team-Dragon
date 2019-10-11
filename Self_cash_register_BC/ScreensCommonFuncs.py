@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
 import time
+import threading
 from PyQt5.QtWidgets import *
 from PyQt5 import*
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import cv2
 from pyzbar.pyzbar import decode
+from PyQt5.QtCore import QTimer
 
 #参考・引用
 #https://tech-k-labs.xyz/post/pyqt3/
@@ -42,10 +44,21 @@ def next_screen_scan(screen1, screen2):
     screen2.resize(size)  # 同じサイズへ
     # 画面の位置が完全に重なる
     '''
-    screen1.hide()  # 遷移前のダイアログを非表示
+    #screen1.hide()  # 遷移前のダイアログを非表示
     screen2.showFullScreen()  # 遷移後のダイアログを表示
-    screen2.register_main()
+    read_BC_dummy()
 
+def read_BC_dummy():
+    n = 0
+    while True:
+
+        if n >= 100:
+            break
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+        n+=1
+    return
 
 def read_BC(window=None, camera=0):
     # VideoCaptureのインスタンスを作成する。
@@ -57,6 +70,8 @@ def read_BC(window=None, camera=0):
     if cap.isOpened() is False:
         print("can not open camera")
         sys.exit()
+
+    time.sleep(0.1)
 
     while True:
         # VideoCaptureから1フレーム読み込む

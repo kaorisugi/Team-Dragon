@@ -6,6 +6,7 @@ from PyQt5 import*
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from UI.SuperWelcomeScreen import *
+from ScreensCommonFuncs import *
 import product_registration
 
 class WelcomeScreen(QtWidgets.QMainWindow):
@@ -28,6 +29,16 @@ class WelcomeScreen(QtWidgets.QMainWindow):
         :return:
         '''
         pass
+
+    def hideEvent(self, _):
+        '''
+
+        :param _: 使わない
+        :return:
+        '''
+        #read_BC()
+        pass
+
     def keyPressEvent(self, e):
         # Escを押すとバーコード読み取り画面が現れる
         if e.key() == Qt.Key_Escape:
