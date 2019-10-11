@@ -6,26 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1400</width>
-    <height>800</height>
+    <width>1440</width>
+    <height>810</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1400</width>
-    <height>800</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>1400</width>
-    <height>800</height>
+    <width>1440</width>
+    <height>810</height>
    </size>
   </property>
   <property name="baseSize">
@@ -74,7 +68,7 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>10</y>
       <width>1381</width>
       <height>781</height>
@@ -199,7 +193,13 @@
              <property name="minimumSize">
               <size>
                <width>300</width>
-               <height>0</height>
+               <height>250</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>300</width>
+               <height>250</height>
               </size>
              </property>
              <property name="text">
@@ -236,6 +236,12 @@
            <item>
             <widget class="QPushButton" name="pushButton">
              <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>90</height>
+              </size>
+             </property>
+             <property name="maximumSize">
               <size>
                <width>300</width>
                <height>90</height>

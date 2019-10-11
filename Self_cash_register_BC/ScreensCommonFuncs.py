@@ -147,3 +147,34 @@ def draw_read_result(read_result_screen = None, table_items = None, dict_names =
         read_result_screen.ui.tableWidget.setItem(n, 0, QtWidgets.QTableWidgetItem(str(t_item)))
         read_result_screen.ui.tableWidget.setItem(n, 1, QtWidgets.QTableWidgetItem(str(t_item)))
 
+
+def dict_product(table_items):
+    dict_product = {}
+    for bc_num in table_items:
+        if bc_num in dict_product.keys():
+            dict_product[bc_num] += 1
+        else:
+            dict_product[bc_num] = 1
+    return dict_product
+
+def update_table(screen, dict_product):
+    _str_1, _str_2, _str_3 = "", "", ""
+    for product in dict_product.keys():
+        _str_1 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#fae984;\">" + screen.dict_names[product] + "</span></p>\n"
+        _str_2 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#fae984;\">" + str(screen.dict_prices[product]*dict_product[product]) + "RWF</span></p>\n"
+        _str_3 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#31582d;\">" + "×" + str(dict_product[product]) + "</span></p>\n"
+    screen.ui.textEdit.setHtml("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                            "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                            "p, li { white-space: pre-wrap; }\n"
+                            "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
+                            + _str_1[:-2])
+    screen.ui.textEdit_2.setHtml("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                            "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                            "p, li { white-space: pre-wrap; }\n"
+                            "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+                            + _str_2[:-2])
+    screen.ui.textEdit_3.setHtml("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                            "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                            "p, li { white-space: pre-wrap; }\n"
+                            "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+                            + _str_3[:-2])

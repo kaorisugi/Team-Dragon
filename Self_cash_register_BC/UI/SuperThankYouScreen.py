@@ -11,14 +11,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SuperThankYouScreen(object):
     def setupUi(self, SuperThankYouScreen):
         SuperThankYouScreen.setObjectName("SuperThankYouScreen")
-        SuperThankYouScreen.resize(1400, 800)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        SuperThankYouScreen.resize(1440, 810)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(SuperThankYouScreen.sizePolicy().hasHeightForWidth())
         SuperThankYouScreen.setSizePolicy(sizePolicy)
-        SuperThankYouScreen.setMinimumSize(QtCore.QSize(1400, 800))
-        SuperThankYouScreen.setMaximumSize(QtCore.QSize(1400, 800))
+        SuperThankYouScreen.setMinimumSize(QtCore.QSize(1440, 810))
         SuperThankYouScreen.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setUnderline(False)
@@ -60,7 +59,13 @@ class Ui_SuperThankYouScreen(object):
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem2)
         self.pushButton = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
+        self.pushButton.setSizePolicy(sizePolicy)
         self.pushButton.setMinimumSize(QtCore.QSize(420, 120))
+        self.pushButton.setMaximumSize(QtCore.QSize(420, 120))
         self.pushButton.setStyleSheet("background:rgb(250, 233, 132);\n"
 "color:rgb(49, 88, 45);\n"
 "font: 80pt \"DIN Condensed\";")
@@ -79,7 +84,7 @@ class Ui_SuperThankYouScreen(object):
 
     def retranslateUi(self, SuperThankYouScreen):
         _translate = QtCore.QCoreApplication.translate
-        SuperThankYouScreen.setWindowTitle(_translate("SuperThankYouScreen", "SuperThankYouScreen"))
+        SuperThankYouScreen.setWindowTitle(_translate("SuperThankYouScreen", "ThankYouScreen"))
         self.label_3.setText(_translate("SuperThankYouScreen", "<html><head/><body><p align=\"center\"><span style=\" font-size:200pt; color:#fae984;\">THANK YOU!</span></p></body></html>"))
         self.pushButton.setText(_translate("SuperThankYouScreen", "EXIT"))
 

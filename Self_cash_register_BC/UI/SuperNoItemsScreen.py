@@ -11,14 +11,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SuperNoItemsScreen(object):
     def setupUi(self, SuperNoItemsScreen):
         SuperNoItemsScreen.setObjectName("SuperNoItemsScreen")
-        SuperNoItemsScreen.resize(1400, 800)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        SuperNoItemsScreen.resize(1440, 810)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(SuperNoItemsScreen.sizePolicy().hasHeightForWidth())
         SuperNoItemsScreen.setSizePolicy(sizePolicy)
         SuperNoItemsScreen.setMinimumSize(QtCore.QSize(1400, 800))
-        SuperNoItemsScreen.setMaximumSize(QtCore.QSize(1400, 800))
         SuperNoItemsScreen.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setUnderline(False)
@@ -89,7 +88,7 @@ class Ui_SuperNoItemsScreen(object):
 
     def retranslateUi(self, SuperNoItemsScreen):
         _translate = QtCore.QCoreApplication.translate
-        SuperNoItemsScreen.setWindowTitle(_translate("SuperNoItemsScreen", "SuperNoItemsScreen"))
+        SuperNoItemsScreen.setWindowTitle(_translate("SuperNoItemsScreen", "NoItemsScreen"))
         self.label_2.setText(_translate("SuperNoItemsScreen", "<html><head/><body><p align=\"center\"><span style=\" font-size:200pt; color:#fae984;\">BARCODE</span></p></body></html>"))
         self.label_3.setText(_translate("SuperNoItemsScreen", "<html><head/><body><p align=\"center\"><span style=\" font-size:200pt; color:#fae984;\">NOT FOUND</span></p></body></html>"))
         self.pushButton_EXIT.setText(_translate("SuperNoItemsScreen", "EXIT"))
