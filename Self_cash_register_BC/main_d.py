@@ -69,11 +69,11 @@ if __name__ == '__main__':
     #WelcomeScreenのボタンを関数と接続する
     #partialを使わないとどうなる？
     welcome_screen.ui.pushButton.clicked.connect(
-        partial(next_screen, screen1 = welcome_screen, screen2 = read_result_screen))
+        partial(next_screen, screen1 = welcome_screen, screen2 = else_item_screen))
     #管理者画面がない！
 
     #scan_screen
-    scan_screen.ui.pushButton_2.clicked.connect(
+    scan_screen.ui.pushButton.clicked.connect(
         partial(next_screen, screen1 = scan_screen, screen2 = cancel_screen))
     #cancelボタン必要かも
     #Finishボタン必要かも
@@ -109,16 +109,16 @@ if __name__ == '__main__':
 
     #CancelScreen
     #No
-    cancel_screen.ui.pushButton_2.clicked.connect(
+    cancel_screen.ui.pushButton.clicked.connect(
         partial(next_screen, screen1 = cancel_screen, screen2 = total_screen))
     #Yes
-    cancel_screen.ui.pushButton_4.clicked.connect(
+    cancel_screen.ui.pushButton_EXIT.clicked.connect(
         partial(next_screen, screen1 = cancel_screen, screen2 = welcome_screen))
 
 
     #ThankYouScreen
     #Exit(?)
-    thank_you_screen.ui.pushButton_2.clicked.connect(
+    thank_you_screen.ui.pushButton.clicked.connect(
         partial(next_screen, screen1 = thank_you_screen, screen2 = welcome_screen))
 
 

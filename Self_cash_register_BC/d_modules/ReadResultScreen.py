@@ -24,9 +24,13 @@ class ReadResultScreen(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
 
     def showEvent(self, _):
-        self.draw_read_result(self.table_items)
+        self.draw_read_result()
 
-    def draw_read_result(self, table_items=None):
+    def pop_and_draw(self):
+        self.table_items.pop(-1)
+        self.draw_read_result()
+
+    def draw_read_result(self):
         '''
         買い物リストを受け取る。
         最後にリストに加えられたものを表示する。

@@ -18,6 +18,6 @@ class ThankYouScreen(QtWidgets.QMainWindow):
         :param parent:
         '''
         super().__init__(parent)
-        self.ui = Ui_SuperThankYoulScreen()
+        self.ui = Ui_SuperThankYouScreen()
         self.ui.setupUi(self)
 
