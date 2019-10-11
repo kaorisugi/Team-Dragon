@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="newPrefix">
     <file>suraimu.png</file>
+    <file>suraimu.png</file>
     <file>start.png</file>
     <file>pay_money.png</file>
     <file>finish.png</file>
