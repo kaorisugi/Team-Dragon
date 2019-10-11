@@ -21,3 +21,10 @@ class TotalScreen(QtWidgets.QMainWindow):
         self.ui = Ui_SuperTotalScreen()
         self.ui.setupUi(self)
 
+    def showEvent(self, _):
+        total = 0
+        for product in self.table_items:
+            total += self.dict_prices[product]
+        self.ui.label_2.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:200pt; color:#fae984; vertical-align:sub;\">" + str(total) + "RWF" + "</span></p></body></html>")
+        
+        update_table(self, dict_product(self.table_items))

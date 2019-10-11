@@ -40,5 +40,5 @@ class ReadResultScreen(QtWidgets.QMainWindow):
         '''
         self.ui.label.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:330pt; color:#fae984; vertical-align:sub;\">" + self.dict_names[self.table_items[-1]] + "</span></p></body></html>")
         self.ui.label_2.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:200pt; color:#31582d; vertical-align:sub;\">" + str(self.dict_prices[self.table_items[-1]]) + "RWF</span></p></body></html>")
-        self.hide()
-        self.showFullScreen()
+ 
+        update_table(self, dict_product(self.table_items))
