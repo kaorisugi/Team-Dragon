@@ -20,4 +20,7 @@ class ThankYouScreen(QtWidgets.QMainWindow):
         super().__init__(parent)
         self.ui = Ui_SuperThankYouScreen()
         self.ui.setupUi(self)
+    
+    def showEvent(self, _):
+        self.table_items = []
 

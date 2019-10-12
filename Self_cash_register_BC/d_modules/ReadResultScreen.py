@@ -26,9 +26,14 @@ class ReadResultScreen(QtWidgets.QMainWindow):
     def showEvent(self, _):
         self.draw_read_result()
 
-    def pop_and_draw(self):
+    def cancel_the_previous_item(self, welcome_screen):
         self.table_items.pop(-1)
-        self.draw_read_result()
+        if self.table_items != []:
+            self.draw_read_result() 
+        else:
+            self.hide()
+            welcome_screen.showFullScreen()
+            
 
     def draw_read_result(self):
         '''
@@ -41,4 +46,4 @@ class ReadResultScreen(QtWidgets.QMainWindow):
         self.ui.label.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:330pt; color:#fae984; vertical-align:sub;\">" + self.dict_names[self.table_items[-1]] + "</span></p></body></html>")
         self.ui.label_2.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:200pt; color:#31582d; vertical-align:sub;\">" + str(self.dict_prices[self.table_items[-1]]) + "RWF</span></p></body></html>")
  
-        update_table(self, dict_product(self.table_items))
+        update_table(self, dict_items(self.table_items))

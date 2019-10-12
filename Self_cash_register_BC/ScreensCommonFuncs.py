@@ -28,25 +28,6 @@ def next_screen(screen1, screen2):
     screen1.hide()  # 遷移前のダイアログを非表示
     screen2.showFullScreen()  # 遷移後のダイアログを表示
 
-def next_screen_scan(screen1, screen2):
-    '''
-    簡易的な画面遷移
-    :param screen1:遷移前の画面
-    :param screen2: 遷移後の画面
-    :return: なし
-    '''
-    '''
-    position = screen1.pos()  # 遷移前のdlgの座標を取得
-    size = screen1.size()  # 遷移前のサイズを取得
-    screen2.move(position.x(), position.y())  # 同じ位置へ
-    screen2.resize(size)  # 同じサイズへ
-    # 画面の位置が完全に重なる
-    '''
-    screen1.hide()  # 遷移前のダイアログを非表示
-    screen2.showFullScreen()  # 遷移後のダイアログを表示
-    screen2.register_main()
-
-
 def read_BC(window=None, camera=0):
     # VideoCaptureのインスタンスを作成する。
     # 引数でカメラを選べれる。
@@ -133,21 +114,21 @@ def draw_read_result(read_result_screen = None, table_items = None, dict_names =
         read_result_screen.ui.tableWidget.setItem(n, 1, QtWidgets.QTableWidgetItem(str(t_item)))
 
 
-def dict_product(table_items):
-    dict_product = {}
+def dict_items(table_items):
+    dict_items = {}
     for bc_num in table_items:
-        if bc_num in dict_product.keys():
-            dict_product[bc_num] += 1
+        if bc_num in dict_items.keys():
+            dict_items[bc_num] += 1
         else:
-            dict_product[bc_num] = 1
-    return dict_product
+            dict_items[bc_num] = 1
+    return dict_items
 
-def update_table(screen, dict_product):
+def update_table(screen, dict_items):
     _str_1, _str_2, _str_3 = "", "", ""
-    for product in dict_product.keys():
-        _str_1 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#fae984;\">" + screen.dict_names[product] + "</span></p>\n"
-        _str_2 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#fae984;\">" + str(screen.dict_prices[product]*dict_product[product]) + "RWF</span></p>\n"
-        _str_3 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#31582d;\">" + "×" + str(dict_product[product]) + "</span></p>\n"
+    for items in dict_items.keys():
+        _str_1 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#fae984;\">" + screen.dict_names[items] + "</span></p>\n"
+        _str_2 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#fae984;\">" + str(screen.dict_prices[items]*dict_items[items]) + "RWF</span></p>\n"
+        _str_3 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#31582d;\">" + "×" + str(dict_items[items]) + "</span></p>\n"
     screen.ui.textEdit.setHtml("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
                             "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
                             "p, li { white-space: pre-wrap; }\n"

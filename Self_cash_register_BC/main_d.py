@@ -38,89 +38,97 @@ if __name__ == '__main__':
     cancel_screen = CancelScreen()
     thank_you_screen = ThankYouScreen()
 
-    #アトリビュートとして辞書を渡しておく
+    # アトリビュートとして辞書を渡しておく
     scan_screen.dict_names, scan_screen.dict_prices = dict_names, dict_prices
-    scan_screen.read_result_screen = read_result_screen
+    scan_screen.read_result_screen, scan_screen.no_items_screen, scan_screen.else_item_screen = read_result_screen, no_items_screen, else_item_screen
     read_result_screen.dict_names, read_result_screen.dict_prices = dict_names, dict_prices
     total_screen.dict_names, total_screen.dict_prices = dict_names, dict_prices
 
 
-    #グローバル変数で買い物リストを定義する
-    #直接参照しているのではなく、引数として渡せば結合度に問題ないのか？
-    table_items = ["4901777018686", "4902705001879", "4902102113625", "4902102113625", "4902102113625", "4897036690055", "4902705001879"]
-    #アトリビュートとして買い物リストを渡しておく
+    # グローバル変数で買い物リストを定義する
+    # 直接参照しているのではなく、引数として渡せば結合度に問題ないのか？
+    table_items = []
+    # table_items = ["4901777018686", "4902705001879", "4902102113625", "4902102113625", "4902102113625", "4897036690055", "4902705001879"]
+    # アトリビュートとして買い物リストを渡しておく
     scan_screen.table_items = table_items
     read_result_screen.table_items = table_items
     total_screen.table_items = table_items
+    thank_you_screen.table_items = table_items
 
-    #WelcomeScreenが表示された時にScanScreenを初期化するようにする
-    #これでできるのか？
+    # WelcomeScreenが表示された時にScanScreenを初期化するようにする
+    # これでできるのか？
     '''
     welcome_screen.showEvent = scan_screen.__init__
     '''
 
-    #引数を固定して関数を定義する
-    #必要ないかも知れない。
+    # 引数を固定して関数を定義する
+    # 必要ないかも知れない。
     partial_read_result_screen = partial(register_main, dict_names = dict_names
                                          , table_items = table_items, scan_screen = scan_screen, read_result_screen = read_result_screen)
 
 
 
-    #WelcomeScreenのボタンを関数と接続する
-    #partialを使わないとどうなる？
+    # WelcomeScreenのボタンを関数と接続する
+    # partialを使わないとどうなる？
     welcome_screen.ui.pushButton.clicked.connect(
         partial(next_screen, screen1 = welcome_screen, screen2 = scan_screen))
-    #管理者画面がない！
+    # 管理者画面がない！
 
-    #scan_screen
+    # ScanScreen
     scan_screen.ui.pushButton.clicked.connect(
-        partial(next_screen, screen1 = scan_screen, screen2 = cancel_screen))
-    #cancelボタン必要かも
-    #Finishボタン必要かも
+        partial(scan_screen.cancel_scanning, welcome_screen = welcome_screen, read_result_screen=read_result_screen))
+    # cancelボタン必要かも
+    # Finishボタン必要かも
 
-    #ReadResultScreen
-    #Continue
+    # ReadResultScreen
+    # Continue
     read_result_screen.ui.pushButton_4.clicked.connect(
         partial(next_screen, screen1 = read_result_screen, screen2 = scan_screen))
-    #Finish
+    # Finish
     read_result_screen.ui.pushButton_2.clicked.connect(
         partial(next_screen, screen1 = read_result_screen, screen2 = total_screen))
-    #Cancel
+    # Cancel
     read_result_screen.ui.pushButton_3.clicked.connect(
-        partial(read_result_screen.pop_and_draw))
+        partial(read_result_screen.cancel_the_previous_item, welcome_screen = welcome_screen))
 
-    #NoItemsScreen
-    #Exit(?)
+    # NoItemsScreen
+    # Exit(?)
     no_items_screen.ui.pushButton_EXIT.clicked.connect(
         partial(next_screen, screen1 = no_items_screen, screen2 = scan_screen))
 
-    #ElseItemScreen
-    #Exit(?)
+    # ElseItemScreen
+    # Exit(?)
     else_item_screen.ui.pushButton_EXIT.clicked.connect(
         partial(next_screen, screen1 = else_item_screen, screen2 = scan_screen))
 
-    #TotalScreen
-    #PayMoney
+    # TotalScreen
+    # PayMoney
     total_screen.ui.pushButton_2.clicked.connect(
         partial(next_screen, screen1 = total_screen, screen2 = thank_you_screen))
-    #Cancel
+    # Cancel
     total_screen.ui.pushButton_3.clicked.connect(
         partial(next_screen, screen1 = total_screen, screen2 = cancel_screen))
 
-    #CancelScreen
-    #No
+    # CancelScreen
+    # No
     cancel_screen.ui.pushButton.clicked.connect(
         partial(next_screen, screen1 = cancel_screen, screen2 = total_screen))
-    #Yes
+    # Yes
     cancel_screen.ui.pushButton_EXIT.clicked.connect(
         partial(next_screen, screen1 = cancel_screen, screen2 = welcome_screen))
 
 
-    #ThankYouScreen
-    #Exit(?)
+    # ThankYouScreen
+    # Exit(?)
     thank_you_screen.ui.pushButton.clicked.connect(
         partial(next_screen, screen1 = thank_you_screen, screen2 = welcome_screen))
 
+
+    # for screen in [welcome_screen, scan_screen, read_result_screen, 
+    #                no_items_screen, else_item_screen, total_screen, 
+    #                cancel_screen, thank_you_screen]:
+    #     screen.showFullScreen()
+    #     screen.hide()
 
     welcome_screen.showFullScreen()
 
