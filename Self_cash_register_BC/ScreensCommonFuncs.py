@@ -13,6 +13,20 @@ from PyQt5.QtCore import QTimer
 #参考・引用
 #https://tech-k-labs.xyz/post/pyqt3/
 
+# 商品コードと商品名、金額
+def csv2dict(path):
+    dict_names, dict_prices = {}, {}
+    with open(path) as f:
+        data = f.read()
+    lines = data.strip().split("\n")
+    for line in lines:
+        try:
+            bc_num, name, price = line.split(",")
+            dict_names[bc_num], dict_prices[bc_num] = name, int(price)
+        except:
+            pass
+    return dict_names, dict_prices
+
 def next_screen(screen1, screen2):
     '''
     簡易的な画面遷移
@@ -30,26 +44,6 @@ def next_screen(screen1, screen2):
     screen1.hide()  # 遷移前のダイアログを非表示
     screen2.showFullScreen()  # 遷移後のダイアログを表示
 
-<<<<<<< HEAD
-=======
-def next_screen_scan(screen1, screen2):
-    '''
-    簡易的な画面遷移
-    :param screen1:遷移前の画面
-    :param screen2: 遷移後の画面
-    :return: なし
-    '''
-    '''
-    position = screen1.pos()  # 遷移前のdlgの座標を取得
-    size = screen1.size()  # 遷移前のサイズを取得
-    screen2.move(position.x(), position.y())  # 同じ位置へ
-    screen2.resize(size)  # 同じサイズへ
-    # 画面の位置が完全に重なる
-    '''
-    screen1.hide()  # 遷移前のダイアログを非表示
-    screen2.showFullScreen()  # 遷移後のダイアログを表示
-    read_BC()
-
 def read_BC_dummy():
     n = 0
     while True:
@@ -62,7 +56,6 @@ def read_BC_dummy():
         n+=1
     return
 
->>>>>>> 11a583febc94015c8442f3f3f0bee848cc9a75e3
 def read_BC(window=None, camera=0):
     # VideoCaptureのインスタンスを作成する。
     # 引数でカメラを選べれる。

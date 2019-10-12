@@ -14,7 +14,6 @@ from d_modules.TotalScreen import *
 from d_modules.CancelScreen import *
 from d_modules.ThankYouScreen import *
 from ScreensCommonFuncs import *
-from BC_video_copy import csv2dict
 
 from functools import partial
 
@@ -71,13 +70,8 @@ if __name__ == '__main__':
     # WelcomeScreenのボタンを関数と接続する
     # partialを使わないとどうなる？
     welcome_screen.ui.pushButton.clicked.connect(
-<<<<<<< HEAD
         partial(next_screen, screen1 = welcome_screen, screen2 = scan_screen))
     # 管理者画面がない！
-=======
-        partial(next_screen_scan, screen1 = welcome_screen, screen2 = scan_screen))
-    #管理者画面がない！
->>>>>>> 11a583febc94015c8442f3f3f0bee848cc9a75e3
 
     # ScanScreen
     scan_screen.ui.pushButton.clicked.connect(

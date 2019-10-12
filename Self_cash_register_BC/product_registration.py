@@ -5,7 +5,7 @@ import csv
 from pyzbar.pyzbar import decode
 from PIL import Image
 
-from BC_video_copy import read_BC
+from ScreensCommonFuncs import *
 
 def add_main():
 
