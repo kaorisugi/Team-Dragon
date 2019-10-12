@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
 import time
+import threading
 from PyQt5.QtWidgets import *
 from PyQt5 import*
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import cv2
 from pyzbar.pyzbar import decode
+from PyQt5.QtCore import QTimer
 
 #参考・引用
 #https://tech-k-labs.xyz/post/pyqt3/
@@ -28,6 +30,39 @@ def next_screen(screen1, screen2):
     screen1.hide()  # 遷移前のダイアログを非表示
     screen2.showFullScreen()  # 遷移後のダイアログを表示
 
+<<<<<<< HEAD
+=======
+def next_screen_scan(screen1, screen2):
+    '''
+    簡易的な画面遷移
+    :param screen1:遷移前の画面
+    :param screen2: 遷移後の画面
+    :return: なし
+    '''
+    '''
+    position = screen1.pos()  # 遷移前のdlgの座標を取得
+    size = screen1.size()  # 遷移前のサイズを取得
+    screen2.move(position.x(), position.y())  # 同じ位置へ
+    screen2.resize(size)  # 同じサイズへ
+    # 画面の位置が完全に重なる
+    '''
+    screen1.hide()  # 遷移前のダイアログを非表示
+    screen2.showFullScreen()  # 遷移後のダイアログを表示
+    read_BC()
+
+def read_BC_dummy():
+    n = 0
+    while True:
+
+        if n >= 100:
+            break
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+        n+=1
+    return
+
+>>>>>>> 11a583febc94015c8442f3f3f0bee848cc9a75e3
 def read_BC(window=None, camera=0):
     # VideoCaptureのインスタンスを作成する。
     # 引数でカメラを選べれる。
@@ -38,6 +73,8 @@ def read_BC(window=None, camera=0):
     if cap.isOpened() is False:
         print("can not open camera")
         sys.exit()
+
+    time.sleep(0.1)
 
     while True:
         # VideoCaptureから1フレーム読み込む
@@ -74,7 +111,7 @@ def register_main(dict_names = None, table_items = None, scan_screen = None, rea
         data = read_BC()
         if len(data) == 0:
             print("バーコードが読み取れていない！！！！") # 例外処理について後で考える！
-        bc_num = data[0][0].decode('utf-8', 'ignore') if data[0][0].decode('utf-8', 'ignore') in dict_names.keys() else "その他" #"その他"よりも任意の英数字の方が良い？
+        bc_num = data[0][0].decode('utf-8', 'ignore') if data[0][0].decode('utf-8', 'ignore') in dict_names.keys() else "SOMETHING ELSE" #"その他"よりも任意の英数字の方が良い？
         table_items.append(bc_num)
         #read_result.draw_read_result_func(table_items)
         read_result_screen.showFullScreen()
