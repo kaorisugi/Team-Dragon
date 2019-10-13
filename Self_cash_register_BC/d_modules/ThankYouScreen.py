@@ -38,7 +38,7 @@ class ThankYouScreen(QtWidgets.QMainWindow):
         directry_name = tdatetime.strftime('%Y%m%d')
         file_name = tdatetime.strftime('%Y%m%d_%H%M%S')
         if not os.path.exists('purchase_record/'+directry_name):
-            # 名前が『月日-曜日-時間』 のフォルダが作成されます
+            # 名前が『YYYYmmdd』 のフォルダが作成されます
             os.mkdir('purchase_record/'+directry_name)
 
         with open('purchase_record/'+directry_name+'/'+file_name+'.csv', 'w') as f:
