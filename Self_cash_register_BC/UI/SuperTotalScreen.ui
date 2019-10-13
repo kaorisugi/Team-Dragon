@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SuperReadResultScreen</class>
- <widget class="QMainWindow" name="SuperReadResultScreen">
+ <class>SuperTotalScreen</class>
+ <widget class="QMainWindow" name="SuperTotalScreen">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -309,7 +309,7 @@ color:rgb(49, 88, 45)
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_4">
+          <widget class="QPushButton" name="pushButton_3">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>

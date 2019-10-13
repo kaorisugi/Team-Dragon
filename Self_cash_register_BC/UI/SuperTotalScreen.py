@@ -8,18 +8,18 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_SuperReadResultScreen(object):
-    def setupUi(self, SuperReadResultScreen):
-        SuperReadResultScreen.setObjectName("SuperReadResultScreen")
-        SuperReadResultScreen.resize(1440, 810)
-        SuperReadResultScreen.setMinimumSize(QtCore.QSize(1440, 810))
-        SuperReadResultScreen.setBaseSize(QtCore.QSize(0, 0))
+class Ui_SuperTotalScreen(object):
+    def setupUi(self, SuperTotalScreen):
+        SuperTotalScreen.setObjectName("SuperTotalScreen")
+        SuperTotalScreen.resize(1440, 810)
+        SuperTotalScreen.setMinimumSize(QtCore.QSize(1440, 810))
+        SuperTotalScreen.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setUnderline(False)
-        SuperReadResultScreen.setFont(font)
-        SuperReadResultScreen.setToolTipDuration(-2)
-        SuperReadResultScreen.setStyleSheet("background:rgb(5, 165, 250)")
-        self.centralwidget = QtWidgets.QWidget(SuperReadResultScreen)
+        SuperTotalScreen.setFont(font)
+        SuperTotalScreen.setToolTipDuration(-2)
+        SuperTotalScreen.setStyleSheet("background:rgb(5, 165, 250)")
+        self.centralwidget = QtWidgets.QWidget(SuperTotalScreen)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget.setGeometry(QtCore.QRect(30, 45, 1381, 731))
@@ -117,57 +117,57 @@ class Ui_SuperReadResultScreen(object):
         self.verticalLayout_5.addWidget(self.pushButton_2)
         spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_5.addItem(spacerItem5)
-        self.pushButton_4 = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.pushButton_3 = QtWidgets.QPushButton(self.verticalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_4.sizePolicy().hasHeightForWidth())
-        self.pushButton_4.setSizePolicy(sizePolicy)
-        self.pushButton_4.setMinimumSize(QtCore.QSize(420, 100))
-        self.pushButton_4.setMaximumSize(QtCore.QSize(420, 120))
+        sizePolicy.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
+        self.pushButton_3.setSizePolicy(sizePolicy)
+        self.pushButton_3.setMinimumSize(QtCore.QSize(420, 100))
+        self.pushButton_3.setMaximumSize(QtCore.QSize(420, 120))
         font = QtGui.QFont()
         font.setFamily("DIN Condensed")
         font.setPointSize(80)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
-        self.pushButton_4.setFont(font)
-        self.pushButton_4.setStyleSheet("background:rgb(250, 233, 132);\n"
+        self.pushButton_3.setFont(font)
+        self.pushButton_3.setStyleSheet("background:rgb(250, 233, 132);\n"
 "font: 80pt \"DIN Condensed\";\n"
 "color:rgb(49, 88, 45)\n"
 "")
-        self.pushButton_4.setText("CANCEL")
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.verticalLayout_5.addWidget(self.pushButton_4)
+        self.pushButton_3.setText("CANCEL")
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.verticalLayout_5.addWidget(self.pushButton_3)
         spacerItem6 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_5.addItem(spacerItem6)
         self.horizontalLayout.addLayout(self.verticalLayout_5)
         spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem7)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
-        SuperReadResultScreen.setCentralWidget(self.centralwidget)
+        SuperTotalScreen.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(SuperReadResultScreen)
-        QtCore.QMetaObject.connectSlotsByName(SuperReadResultScreen)
+        self.retranslateUi(SuperTotalScreen)
+        QtCore.QMetaObject.connectSlotsByName(SuperTotalScreen)
 
-    def retranslateUi(self, SuperReadResultScreen):
+    def retranslateUi(self, SuperTotalScreen):
         _translate = QtCore.QCoreApplication.translate
-        SuperReadResultScreen.setWindowTitle(_translate("SuperReadResultScreen", "TotalScreen"))
-        self.label.setText(_translate("SuperReadResultScreen", "<html><head/><body><p align=\"center\"><span style=\" color:#31582d;\">TOTAL</span></p></body></html>"))
-        self.label_2.setText(_translate("SuperReadResultScreen", "<html><head/><body><p align=\"center\"><span style=\" color:#fae984;\">150RWF</span></p></body></html>"))
-        self.textEdit_3.setHtml(_translate("SuperReadResultScreen", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        SuperTotalScreen.setWindowTitle(_translate("SuperTotalScreen", "TotalScreen"))
+        self.label.setText(_translate("SuperTotalScreen", "<html><head/><body><p align=\"center\"><span style=\" color:#31582d;\">TOTAL</span></p></body></html>"))
+        self.label_2.setText(_translate("SuperTotalScreen", "<html><head/><body><p align=\"center\"><span style=\" color:#fae984;\">150RWF</span></p></body></html>"))
+        self.textEdit_3.setHtml(_translate("SuperTotalScreen", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#31582d;\">×2</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#31582d;\">×1</span></p></body></html>"))
-        self.textEdit_2.setHtml(_translate("SuperReadResultScreen", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.textEdit_2.setHtml(_translate("SuperTotalScreen", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#fae984;\">250RWF</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#fae984;\">300RWF</span></p></body></html>"))
-        self.textEdit.setHtml(_translate("SuperReadResultScreen", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.textEdit.setHtml(_translate("SuperTotalScreen", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
