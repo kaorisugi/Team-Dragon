@@ -44,4 +44,4 @@ class WelcomeScreen(QtWidgets.QMainWindow):
         if e.key() == Qt.Key_Escape:
             product_registration.add_main()
             #self.close()
-            pass
+        ellif e.key() == Qt.Key_Escape:

@@ -14,7 +14,7 @@ from d_modules.TotalScreen import *
 from d_modules.CancelScreen import *
 from d_modules.ThankYouScreen import *
 from ScreensCommonFuncs import *
-
+import platform
 from functools import partial
 
 import sys
@@ -25,7 +25,8 @@ if __name__ == '__main__':
     # 商品の辞書をロードする
     dict_names, dict_prices = csv2dict('names_prices/BC_info.csv')
 
-    print()
+
+
 
     app = QtWidgets.QApplication(sys.argv)
     welcome_screen = WelcomeScreen()
@@ -110,10 +111,10 @@ if __name__ == '__main__':
 
     # CancelScreen
     # No
-    cancel_screen.ui.pushButton.clicked.connect(
+    cancel_screen.ui.pushButton_no.clicked.connect(
         partial(next_screen, screen1 = cancel_screen, screen2 = total_screen))
     # Yes
-    cancel_screen.ui.pushButton_EXIT.clicked.connect(
+    cancel_screen.ui.pushButton_yes.clicked.connect(
         partial(next_screen, screen1 = cancel_screen, screen2 = welcome_screen))
 
 
