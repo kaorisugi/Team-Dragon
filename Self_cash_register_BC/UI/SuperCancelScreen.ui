@@ -46,31 +46,9 @@
    <number>-2</number>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:rgb(43, 148, 209)</string>
+   <string notr="true">background:rgb(5, 165, 250)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>840</y>
-      <width>430</width>
-      <height>120</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DIN Condensed</family>
-      <pointsize>72</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:url(:/newPrefix/image/continue.png)</string>
-    </property>
-    <property name="text">
-     <string notr="true"/>
-    </property>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
@@ -152,8 +130,14 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_EXIT">
+          <widget class="QPushButton" name="pushButton_yes">
            <property name="minimumSize">
+            <size>
+             <width>420</width>
+             <height>120</height>
+            </size>
+           </property>
+           <property name="maximumSize">
             <size>
              <width>420</width>
              <height>120</height>
@@ -191,7 +175,7 @@ color:rgb(49, 88, 45)</string>
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="pushButton_no">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -207,7 +191,7 @@ color:rgb(49, 88, 45)</string>
            <property name="maximumSize">
             <size>
              <width>420</width>
-             <height>420</height>
+             <height>120</height>
             </size>
            </property>
            <property name="styleSheet">

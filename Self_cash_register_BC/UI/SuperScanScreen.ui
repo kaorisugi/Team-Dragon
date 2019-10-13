@@ -40,7 +40,7 @@
    <number>-2</number>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:url(:/newPrefix/teamdragon_System_NAVI_yoko.009.jpeg)</string>
+   <string notr="true">background:rgb(5,165,250)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="horizontalLayoutWidget">

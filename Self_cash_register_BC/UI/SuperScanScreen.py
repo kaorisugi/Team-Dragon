@@ -23,7 +23,7 @@ class Ui_SuperScanScreen(object):
         font.setUnderline(False)
         SuperScanScreen.setFont(font)
         SuperScanScreen.setToolTipDuration(-2)
-        SuperScanScreen.setStyleSheet("background:url(:/newPrefix/teamdragon_System_NAVI_yoko.009.jpeg)")
+        SuperScanScreen.setStyleSheet("background:rgb(5,165,250)")
         self.centralwidget = QtWidgets.QWidget(SuperScanScreen)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
