@@ -23,7 +23,7 @@ class WelcomeScreen(QtWidgets.QMainWindow):
         super().__init__(parent)
         self.ui = Ui_SuperWelcomeScreen()
         self.ui.setupUi(self)
-        self.table_items =[]
+        self.table_items = None
 
     def showEvent(self, _):
         '''
@@ -31,7 +31,7 @@ class WelcomeScreen(QtWidgets.QMainWindow):
         :return:
         '''
         SoundPlayer.play('sound/thema.mp3', stop=True)
-        self.table_items =[]
+        self.table_items.clear()
 
     def hideEvent(self, _):
         '''
