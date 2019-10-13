@@ -10,6 +10,7 @@ import cv2
 from pyzbar.pyzbar import decode
 from PyQt5.QtCore import QTimer
 import platform
+from play_sound import SoundPlayer #階層に注意
 
 # OSがLinuxであれば、ラズパイ上で起動しているとし、カメラを切り替える
 if platform.system() == "Linux":
@@ -50,6 +51,24 @@ def next_screen(screen1, screen2):
     screen1.hide()  # 遷移前のダイアログを非表示
     screen2.showFullScreen()  # 遷移後のダイアログを表示
 
+def next_screen_cancel(screen1, screen2):
+    '''
+    簡易的な画面遷移
+    :param screen1:遷移前の画面
+    :param screen2: 遷移後の画面
+    :return: なし
+    '''
+    '''
+    position = screen1.pos()  # 遷移前のdlgの座標を取得
+    size = screen1.size()  # 遷移前のサイズを取得
+    screen2.move(position.x(), position.y())  # 同じ位置へ
+    screen2.resize(size)  # 同じサイズへ
+    # 画面の位置が完全に重なる
+    '''
+    SoundPlayer.play('sound/run_away.mp3', stop=True)
+    time.sleep(2)
+    screen1.hide()  # 遷移前のダイアログを非表示
+    screen2.showFullScreen()  # 遷移後のダイアログを表示
 
 def read_BC(window=None, camera=0):
     if platform.system() == "Linux":
