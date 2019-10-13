@@ -7,6 +7,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from UI.SuperScanScreen import *
 from ScreensCommonFuncs import *
+from play_sound import SoundPlayer #階層に注意
 
 class ScanScreen(QtWidgets.QMainWindow):
     repeatTime = 100 # ms
@@ -72,6 +73,7 @@ class ScanScreen(QtWidgets.QMainWindow):
         if len(data) != 0:
             self.capture.release()
             self.timer.stop()
+            SoundPlayer.play('sound/critical.mp3')
             #読み取れたらwhileから抜ける
             bc_num = data[0][0].decode('utf-8', 'ignore') if data[0][0].decode('utf-8', 'ignore') in self.dict_names.keys() else "somethingelse"
             if bc_num != "somethingelse":

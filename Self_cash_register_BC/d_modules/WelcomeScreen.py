@@ -8,6 +8,7 @@ from PyQt5.QtCore import *
 from UI.SuperWelcomeScreen import *
 from ScreensCommonFuncs import *
 import product_registration
+from play_sound import SoundPlayer #階層に注意
 
 class WelcomeScreen(QtWidgets.QMainWindow):
     '''
@@ -22,13 +23,15 @@ class WelcomeScreen(QtWidgets.QMainWindow):
         super().__init__(parent)
         self.ui = Ui_SuperWelcomeScreen()
         self.ui.setupUi(self)
+        self.table_items = None
+
     def showEvent(self, _):
         '''
-        ScanScreenを初期化する。
         :param _: 使わない
         :return:
         '''
-        pass
+        SoundPlayer.play('sound/thema.mp3', stop=True)
+        self.table_items.clear()
 
     def hideEvent(self, _):
         '''
@@ -36,8 +39,7 @@ class WelcomeScreen(QtWidgets.QMainWindow):
         :param _: 使わない
         :return:
         '''
-        #read_BC()
-        pass
+        SoundPlayer.play('sound/zoma.mp3', stop=True)
 
     def keyPressEvent(self, e):
         # Escを押すとバーコード読み取り画面が現れる

@@ -16,7 +16,7 @@ from d_modules.ThankYouScreen import *
 from ScreensCommonFuncs import *
 import platform
 from functools import partial
-
+from play_sound import SoundPlayer #階層に注意
 import sys
 
 
@@ -43,6 +43,7 @@ if __name__ == '__main__':
     scan_screen.read_result_screen, scan_screen.no_items_screen, scan_screen.else_item_screen = read_result_screen, no_items_screen, else_item_screen
     read_result_screen.dict_names, read_result_screen.dict_prices = dict_names, dict_prices
     total_screen.dict_names, total_screen.dict_prices = dict_names, dict_prices
+    thank_you_screen.dict_names, thank_you_screen.dict_prices = dict_names, dict_prices
 
 
     # グローバル変数で買い物リストを定義する
@@ -50,6 +51,7 @@ if __name__ == '__main__':
     table_items = []
     # table_items = ["4901777018686", "4902705001879", "4902102113625", "4902102113625", "4902102113625", "4897036690055", "4902705001879"]
     # アトリビュートとして買い物リストを渡しておく
+    welcome_screen.table_items = table_items
     scan_screen.table_items = table_items
     read_result_screen.table_items = table_items
     total_screen.table_items = table_items
@@ -115,7 +117,7 @@ if __name__ == '__main__':
         partial(next_screen, screen1 = cancel_screen, screen2 = total_screen))
     # Yes
     cancel_screen.ui.pushButton_yes.clicked.connect(
-        partial(next_screen, screen1 = cancel_screen, screen2 = welcome_screen))
+        partial(next_screen_cancel, screen1 = cancel_screen, screen2 = welcome_screen))
 
 
     # ThankYouScreen
