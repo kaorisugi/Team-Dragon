@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7f6599e-0fb5-4ff9-9c7e-5f158ece13ec" name="Default Changelist" comment="実行ファイル（ドラゴン）">
-      <change beforePath="$PROJECT_DIR$/ScreensCommonFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScreensCommonFuncs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/d_modules/WelcomeScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/d_modules/WelcomeScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_d.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/os_name_get_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/os_name_get_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_d.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1740">
@@ -75,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/d_modules/WelcomeScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="46" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+            <state relative-caret-position="528">
+              <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
               <folding>
                 <element signature="e#24#34#0" expanded="true" />
               </folding>
@@ -143,9 +140,9 @@
         <option value="$PROJECT_DIR$/d_modules/ReadResultScreen.py" />
         <option value="$PROJECT_DIR$/d_modules/ScanScreen.py" />
         <option value="$PROJECT_DIR$/os_name_get_test.py" />
-        <option value="$PROJECT_DIR$/d_modules/WelcomeScreen.py" />
         <option value="$PROJECT_DIR$/main_d.py" />
         <option value="$PROJECT_DIR$/ScreensCommonFuncs.py" />
+        <option value="$PROJECT_DIR$/d_modules/WelcomeScreen.py" />
       </list>
     </option>
   </component>
@@ -294,7 +291,7 @@
       <workItem from="1570282986553" duration="84000" />
       <workItem from="1570283126393" duration="87000" />
       <workItem from="1570283341342" duration="39677000" />
-      <workItem from="1570533402243" duration="40404000" />
+      <workItem from="1570533402243" duration="40505000" />
     </task>
     <task id="LOCAL-00001" summary="実行ファイル（ドラゴン）">
       <created>1570631319864</created>
@@ -307,7 +304,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82925000" />
+    <option name="totallyTimeSpent" value="83026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -614,30 +611,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ScreensCommonFuncs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="147" column="11" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
-          <folding>
-            <element signature="e#24#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UI/SuperReadResultScreen.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d_modules/WelcomeScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="46" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-          <folding>
-            <element signature="e#24#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -655,6 +632,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1740">
           <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScreensCommonFuncs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="147" column="11" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
+          <folding>
+            <element signature="e#24#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d_modules/WelcomeScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
           <folding>
             <element signature="e#24#34#0" expanded="true" />
           </folding>
