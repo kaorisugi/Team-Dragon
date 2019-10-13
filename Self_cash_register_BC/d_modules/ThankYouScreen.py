@@ -22,5 +22,5 @@ class ThankYouScreen(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
     
     def showEvent(self, _):
-        self.table_items = []
+        self.table_items.clear()
 
