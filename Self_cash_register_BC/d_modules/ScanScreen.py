@@ -52,7 +52,7 @@ class ScanScreen(QtWidgets.QMainWindow):
 
     def capture_display(self):
         self.CAMERA_MODE = 0
-        self.v_width, self.v_height= 350, 280
+        self.v_width, self.v_height= 320, 240
 
         #camera setup
         self.capture = cv2.VideoCapture(self.CAMERA_MODE)
@@ -71,48 +71,7 @@ class ScanScreen(QtWidgets.QMainWindow):
         self.timer.timeout.connect(self._set)
         self.timer.start(self.repeatTime)
 
-    def capture_display_raspi(self):
-        self.CAMERA_MODE = 0
-        self.v_width, self.v_height= 320, 240 # カメラの解像度を320x240にセット
-        # VideoCaptureのインスタンスを作成する。
-        with picamera.PiCamera() as camera:
-            with picamera.array.PiRGBArray(camera) as stream:
-                camera.resolution = (self.v_width, self.v_height)
-                camera.framerate = 15 # カメラのフレームレートを15fpsにセット
-                # ホワイトバランスをfluorescent(蛍光灯)モードにセット
-                camera.awb_mode = 'fluorescent'
-                while True:
-                    # stream.arrayにBGRの順で映像データを格納
-                    camera.capture(stream, 'bgr', use_video_port=True)
-                    frame = stream.array
-                    # バーコードの読取り
-                    data = decode(frame)
-                    if len(data) != 0:
-                        # 読み取れたらwhileから抜ける
-                        break
-                    # system.arrayをウインドウに表示
-                    # cv2.imshow('frame', stream.array)
-                    # streamをリセット
-                    stream.seek(0)
-                    stream.truncate()
-        return data
-
     def _set(self):
-        #camera capture
-        ret, cv_img = self.capture.read()
-        # バーコードの読取り
-        data = decode(cv_img)
-        self._check_BC(data)
-        if ret == False:
-            return
-        cv_img = cv2.cvtColor(cv_img,cv2.COLOR_BGR2RGB)
-        height, width, dim = cv_img.shape
-        bytesPerLine = dim * width
-        self.image = QImage(cv_img.data, width, height, bytesPerLine, QImage.Format_RGB888)
-        self.ui.label_2.setPixmap(QPixmap.fromImage(self.image))
-        self._check_time()
-
-    def _set_raspi(self):
         #camera capture
         ret, cv_img = self.capture.read()
         # バーコードの読取り
@@ -131,8 +90,8 @@ class ScanScreen(QtWidgets.QMainWindow):
         if len(data) != 0:
             self.capture.release()
             self.timer.stop()
-            SoundPlayer.play('sound/critical.mp3')
-            #読み取れたらwhileから抜ける
+            # SoundPlayer.play('sound/critical.mp3')
+            # 読み取れたらwhileから抜ける
             bc_num = data[0][0].decode('utf-8', 'ignore') if data[0][0].decode('utf-8', 'ignore') in self.dict_names.keys() else "somethingelse"
             if bc_num != "somethingelse":
                 self.table_items.append(bc_num)
@@ -159,3 +118,66 @@ class ScanScreen(QtWidgets.QMainWindow):
         else:
             self.hide()
             read_result_screen.showFullScreen()
+
+    
+
+    def capture_display_raspi(self):
+        self.CAMERA_MODE = 0
+        self.v_width, self.v_height= 320, 240 # カメラの解像度を320x240にセット
+        # VideoCaptureのインスタンスを作成する。
+        with picamera.PiCamera() as camera:
+            with picamera.array.PiRGBArray(camera) as stream:
+                self.camera, self.stream = camera, stream
+                self.camera.resolution = (self.v_width, self.v_height)
+                self.camera.framerate = 15 # カメラのフレームレートを15fpsにセット
+                # ホワイトバランスをfluorescent(蛍光灯)モードにセット
+                self.camera.awb_mode = 'fluorescent'
+
+                self.start_time = time.time()
+                self._set_raspi()
+                #update timer
+                self.timer = QTimer(self)
+                self.timer.timeout.connect(self._set_raspi)
+                self.timer.start(self.repeatTime)
+        return data
+
+    def _set_raspi(self):
+        # stream.arrayにBGRの順で映像データを格納
+        self.camera.capture(stream, 'bgr', use_video_port=True)
+        frame = self.stream.array
+        # バーコードの読取り
+        data = decode(frame)
+        # system.arrayをウインドウに表示
+        # cv2.imshow('frame', stream.array)
+        # streamをリセット
+        self.stream.seek(0)
+        self.stream.truncate()
+        self._check_BC_raspi(data)
+
+        cv_img = cv2.cvtColor(cv_img,cv2.COLOR_BGR2RGB)
+        height, width, dim = cv_img.shape
+        bytesPerLine = dim * width
+        self.image = QImage(cv_img.data, width, height, bytesPerLine, QImage.Format_RGB888)
+        self.ui.label_2.setPixmap(QPixmap.fromImage(self.image))
+        self._check_time_raspi()
+
+    def _check_BC_raspi(self, data):
+        if len(data) != 0:
+            self.timer.stop()
+            # SoundPlayer.play('sound/critical.mp3')
+            # 読み取れたらwhileから抜ける
+            bc_num = data[0][0].decode('utf-8', 'ignore') if data[0][0].decode('utf-8', 'ignore') in self.dict_names.keys() else "somethingelse"
+            if bc_num != "somethingelse":
+                self.table_items.append(bc_num)
+                self.hide()
+                self.read_result_screen.showFullScreen()
+            else:
+                self.hide()
+                self.else_item_screen.showFullScreen()
+
+    def _check_time_raspi(self):
+        current_time = time.time()
+        if current_time - self.start_time > self.search_time:
+            self.timer.stop()
+            self.hide()
+            self.no_items_screen.showFullScreen()
