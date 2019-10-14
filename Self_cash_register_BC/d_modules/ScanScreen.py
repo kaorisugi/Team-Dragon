@@ -110,7 +110,11 @@ class ScanScreen(QtWidgets.QMainWindow):
             self.no_items_screen.showFullScreen()
 
     def cancel_scanning(self, welcome_screen, read_result_screen):
-        self.capture.release()
+        # self.capture.release()
+        # streamをリセット
+        self.stream.seek(0)
+        self.stream.truncate()
+
         self.timer.stop()
         if self.table_items == []:
             self.hide()
@@ -154,7 +158,7 @@ class ScanScreen(QtWidgets.QMainWindow):
         self.stream.truncate()
         self._check_BC_raspi(data)
 
-        cv_img = cv2.cvtColor(cv_img,cv2.COLOR_BGR2RGB)
+        cv_img = cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
         height, width, dim = cv_img.shape
         bytesPerLine = dim * width
         self.image = QImage(cv_img.data, width, height, bytesPerLine, QImage.Format_RGB888)
