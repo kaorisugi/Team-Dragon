@@ -25,6 +25,6 @@ class TotalScreen(QtWidgets.QMainWindow):
         total = 0
         for item in self.table_items:
             total += self.dict_prices[item]
-        self.ui.label_2.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:200pt; color:#fae984; vertical-align:sub;\">" + str(total) + "RWF" + "</span></p></body></html>")
+        self.ui.label_2.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:150pt; color:#fae984;\">" + str(total) + "RWF" + "</span></p></body></html>")
         
         update_table(self, dict_items(self.table_items))

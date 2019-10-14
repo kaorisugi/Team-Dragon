@@ -37,6 +37,8 @@ class ScanScreen(QtWidgets.QMainWindow):
         # self.capture_display_raspi()
 
     def keyPressEvent(self, e):
+        self.capture.release()
+        self.timer.stop()
         # エスケープキーを押すと画面が閉じる
         if e.key() == Qt.Key_F:
             self.hide()
@@ -79,7 +81,7 @@ class ScanScreen(QtWidgets.QMainWindow):
         self._check_BC(data)
         if ret == False:
             return
-        cv_img = cv2.cvtColor(cv_img,cv2.COLOR_BGR2RGB)
+        cv_img = cv2.flip(cv2.cvtColor(cv_img,cv2.COLOR_BGR2RGB), 1)
         height, width, dim = cv_img.shape
         bytesPerLine = dim * width
         self.image = QImage(cv_img.data, width, height, bytesPerLine, QImage.Format_RGB888)
@@ -111,10 +113,6 @@ class ScanScreen(QtWidgets.QMainWindow):
 
     def cancel_scanning(self, welcome_screen, read_result_screen):
         # self.capture.release()
-        # streamをリセット
-        self.stream.seek(0)
-        self.stream.truncate()
-
         self.timer.stop()
         if self.table_items == []:
             self.hide()
@@ -127,7 +125,7 @@ class ScanScreen(QtWidgets.QMainWindow):
 
     def capture_display_raspi(self):
         self.CAMERA_MODE = 0
-        self.v_width, self.v_height= 320, 240 # カメラの解像度を320x240にセット
+        self.v_width, self.v_height= 354, 264 # カメラの解像度を self.v_width × self.v_height にセット
         # VideoCaptureのインスタンスを作成する。
         with picamera.PiCamera() as camera:
             with picamera.array.PiRGBArray(camera) as stream:
@@ -158,7 +156,7 @@ class ScanScreen(QtWidgets.QMainWindow):
         self.stream.truncate()
         self._check_BC_raspi(data)
 
-        cv_img = cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
+        cv_img = cv2.flip(cv2.cvtColor(frame,cv2.COLOR_BGR2RGB), 1)
         height, width, dim = cv_img.shape
         bytesPerLine = dim * width
         self.image = QImage(cv_img.data, width, height, bytesPerLine, QImage.Format_RGB888)

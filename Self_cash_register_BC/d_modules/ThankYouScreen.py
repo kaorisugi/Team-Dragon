@@ -29,11 +29,11 @@ class ThankYouScreen(QtWidgets.QMainWindow):
         total = 0
         for item in self.table_items:
             total += self.dict_prices[item]
-        if total >= 300:
-            SoundPlayer.play('sound/levelup.mp3', stop=True)
-        else:
-            SoundPlayer.play('sound/fin.mp3', stop=True)
-        #購買記録を出力
+        # if total >= 300:
+        #     SoundPlayer.play('sound/levelup.mp3', stop=True)
+        # else:
+        #     SoundPlayer.play('sound/fin.mp3', stop=True)
+        # 購買記録を出力
         tdatetime = dt.now()
         directry_name = tdatetime.strftime('%Y%m%d')
         file_name = tdatetime.strftime('%Y%m%d_%H%M%S')

@@ -65,8 +65,8 @@ def next_screen_cancel(screen1, screen2):
     screen2.resize(size)  # 同じサイズへ
     # 画面の位置が完全に重なる
     '''
-    SoundPlayer.play('sound/run_away.mp3', stop=True)
-    time.sleep(2)
+    # SoundPlayer.play('sound/run_away.mp3', stop=True)
+    # time.sleep(2)
     screen1.hide()  # 遷移前のダイアログを非表示
     screen2.showFullScreen()  # 遷移後のダイアログを表示
 
@@ -203,21 +203,21 @@ def dict_items(table_items):
 def update_table(screen, dict_items):
     _str_1, _str_2, _str_3 = "", "", ""
     for items in dict_items.keys():
-        _str_1 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#fae984;\">" + screen.dict_names[items] + "</span></p>\n"
-        _str_2 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#fae984;\">" + str(screen.dict_prices[items]*dict_items[items]) + "RWF</span></p>\n"
-        _str_3 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'.SF NS Text\'; font-size:50pt; font-weight:600; color:#31582d;\">" + "×" + str(dict_items[items]) + "</span></p>\n"
+        _str_1 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:40pt; color:#fae984;\">" + screen.dict_names[items] + "</span></p>\n"
+        _str_2 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:40pt; color:#fae984;\">" + str(screen.dict_prices[items]*dict_items[items]) + "RWF</span></p>\n"
+        _str_3 += "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:40pt; color:#31582d;\">" + "×" + str(dict_items[items]) + "</span></p>\n"
     screen.ui.textEdit.setHtml("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
                             "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
                             "p, li { white-space: pre-wrap; }\n"
-                            "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
+                            "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:40pt; font-style:normal;\">\n"
                             + _str_1[:-2])
     screen.ui.textEdit_2.setHtml("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
                             "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
                             "p, li { white-space: pre-wrap; }\n"
-                            "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+                            "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:40pt; font-style:normal;\">\n"
                             + _str_2[:-2])
     screen.ui.textEdit_3.setHtml("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
                             "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
                             "p, li { white-space: pre-wrap; }\n"
-                            "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+                            "</style></head><body style=\" font-family:\'DIN Condensed\'; font-size:40pt; font-style:normal;\">\n"
                             + _str_3[:-2])
