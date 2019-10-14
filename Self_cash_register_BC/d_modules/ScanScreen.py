@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 import sys
 import time
+# import picamera
+# import picamera.array
 from PyQt5.QtWidgets import *
 from PyQt5 import*
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from UI.SuperScanScreen import *
 from ScreensCommonFuncs import *
+from play_sound import SoundPlayer #階層に注意
 
 class ScanScreen(QtWidgets.QMainWindow):
     repeatTime = 100 # ms
@@ -31,6 +34,21 @@ class ScanScreen(QtWidgets.QMainWindow):
         :return:
         '''
         self.capture_display()
+        # self.capture_display_raspi()
+
+    def keyPressEvent(self, e):
+        # エスケープキーを押すと画面が閉じる
+        if e.key() == Qt.Key_F:
+            self.hide()
+            self.no_items_screen.showFullScreen()
+        elif e.key() == Qt.Key_G:
+            self.hide()
+            self.else_item_screen.showFullScreen()
+        elif e.key() == Qt.Key_H:
+            for item in ["4901777018686", "4902705001879", "4902102113625", "4902102113625", "4902102113625", "4897036690055", "4902705001879"]:
+                self.table_items.append(item)
+            self.hide()
+            self.read_result_screen.showFullScreen()
 
     def capture_display(self):
         self.CAMERA_MODE = 0
@@ -53,7 +71,48 @@ class ScanScreen(QtWidgets.QMainWindow):
         self.timer.timeout.connect(self._set)
         self.timer.start(self.repeatTime)
 
+    def capture_display_raspi(self):
+        self.CAMERA_MODE = 0
+        self.v_width, self.v_height= 320, 240 # カメラの解像度を320x240にセット
+        # VideoCaptureのインスタンスを作成する。
+        with picamera.PiCamera() as camera:
+            with picamera.array.PiRGBArray(camera) as stream:
+                camera.resolution = (self.v_width, self.v_height)
+                camera.framerate = 15 # カメラのフレームレートを15fpsにセット
+                # ホワイトバランスをfluorescent(蛍光灯)モードにセット
+                camera.awb_mode = 'fluorescent'
+                while True:
+                    # stream.arrayにBGRの順で映像データを格納
+                    camera.capture(stream, 'bgr', use_video_port=True)
+                    frame = stream.array
+                    # バーコードの読取り
+                    data = decode(frame)
+                    if len(data) != 0:
+                        # 読み取れたらwhileから抜ける
+                        break
+                    # system.arrayをウインドウに表示
+                    # cv2.imshow('frame', stream.array)
+                    # streamをリセット
+                    stream.seek(0)
+                    stream.truncate()
+        return data
+
     def _set(self):
+        #camera capture
+        ret, cv_img = self.capture.read()
+        # バーコードの読取り
+        data = decode(cv_img)
+        self._check_BC(data)
+        if ret == False:
+            return
+        cv_img = cv2.cvtColor(cv_img,cv2.COLOR_BGR2RGB)
+        height, width, dim = cv_img.shape
+        bytesPerLine = dim * width
+        self.image = QImage(cv_img.data, width, height, bytesPerLine, QImage.Format_RGB888)
+        self.ui.label_2.setPixmap(QPixmap.fromImage(self.image))
+        self._check_time()
+
+    def _set_raspi(self):
         #camera capture
         ret, cv_img = self.capture.read()
         # バーコードの読取り
@@ -72,6 +131,7 @@ class ScanScreen(QtWidgets.QMainWindow):
         if len(data) != 0:
             self.capture.release()
             self.timer.stop()
+            SoundPlayer.play('sound/critical.mp3')
             #読み取れたらwhileから抜ける
             bc_num = data[0][0].decode('utf-8', 'ignore') if data[0][0].decode('utf-8', 'ignore') in self.dict_names.keys() else "somethingelse"
             if bc_num != "somethingelse":
