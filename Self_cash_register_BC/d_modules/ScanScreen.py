@@ -54,7 +54,7 @@ class ScanScreen(QtWidgets.QMainWindow):
 
     def capture_display(self):
         self.CAMERA_MODE = 0
-        self.v_width, self.v_height= 320, 240
+        self.v_width, self.v_height= 960, 720
 
         #camera setup
         self.capture = cv2.VideoCapture(self.CAMERA_MODE)
@@ -125,7 +125,7 @@ class ScanScreen(QtWidgets.QMainWindow):
 
     def capture_display_raspi(self):
         self.CAMERA_MODE = 0
-        self.v_width, self.v_height= 354, 264 # カメラの解像度を self.v_width × self.v_height にセット
+        self.v_width, self.v_height= 960, 720 # カメラの解像度を self.v_width × self.v_height にセット
         # VideoCaptureのインスタンスを作成する。
         with picamera.PiCamera() as camera:
             with picamera.array.PiRGBArray(camera) as stream:

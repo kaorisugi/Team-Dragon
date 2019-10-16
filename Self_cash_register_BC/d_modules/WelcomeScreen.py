@@ -43,7 +43,9 @@ class WelcomeScreen(QtWidgets.QMainWindow):
 
     def keyPressEvent(self, e):
         # Escを押すとバーコード読み取り画面が現れる
-        if e.key() == Qt.Key_Escape:
+        #print(e.key())#Qt.Key_EscapeでEscKey
+        if e.key() == 81: #Qを入力した場合、終了する
 #            product_registration.add_main()
             self.close()
-#        ellif e.key() == Qt.Key_Escape:
+        elif e.key() == 69: #Eを入力した場合、商品追加画面
+            product_registration.add_main()
